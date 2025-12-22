@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-espresso: #B8734E;
+  --color-espresso-dark: #8F5536;
+  --font-family-serif: "Playfair Display", serif;
+  --font-family-sans: "Inter", sans-serif;
+}
