@@ -6,7 +6,7 @@ export default function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div id="home" className="min-h-[115vh] w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-screen sm:min-h-[130vh] md:min-h-[140vh] lg:min-h-[120vh] w-full bg-black relative overflow-hidden font-sans">
 
       {/* ================= BACKGROUND GLOW ================= */}
       <div
@@ -122,14 +122,14 @@ export default function Hero() {
       </section>
 
       {/* ================= TABLET + WAVE ================= */}
-      <div className="absolute inset-x-0 bottom-0 h-[600px] pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 h-[450px] sm:h-[500px] md:h-[550px] lg:h-[500px] pointer-events-none">
         <div className="absolute left-0 w-full z-20">
           <img src={waveImg} alt="wave" className="w-full object-cover" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 md:bottom-20 sm:bottom-75 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
-          <img src={tabImg} alt="tablet" className="w-[840px] max-sm:w-[350px]" />
+        <div className="absolute left-1/2 bottom-12 sm:bottom-20 md:bottom-32 lg:bottom-24 xl:bottom-20 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+          <img src={tabImg} alt="tablet" className="w-[350px] sm:w-[500px] md:w-[700px] lg:w-[840px]" />
         </div>
       </div>
 
