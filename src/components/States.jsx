@@ -57,7 +57,7 @@ const States = () => {
       animate={{ opacity: isInView ? 1 : 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="mt-8 mb-16 flex justify-center items-center gap-8 md:gap-12 lg:gap-16 max-sm:flex-col max-sm:gap-14">
+      <div className="mt-8 mb-20 flex justify-center items-center gap-8 md:gap-12 lg:gap-16 max-sm:flex-col max-sm:gap-14">
         <Stat value={`${reach}M+`} label="TARGETED REACH" />
         <Divider />
         <Stat value={`${brands}+`} label="BRANDS SCALED" />

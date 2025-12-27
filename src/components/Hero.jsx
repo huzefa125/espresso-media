@@ -34,7 +34,7 @@ export default function Hero() {
               <a
                 key={item.name}
                 href={item.href}
-                className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-espresso after:transition-all after:duration-300 hover:after:w-full"
+                className="relative slant-underline"
               >
                 {item.name}
               </a>
@@ -133,12 +133,35 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ================= KEYFRAMES ================= */}
+      {/* ================= KEYFRAMES & NAV UNDERLINE ================= */}
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(50px); }
           to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Slanted (leaning) underline for nav links */
+        .slant-underline::after {
+          content: "";
+          position: absolute;
+          bottom: -0.2rem; /* slightly closer to baseline */
+          left: 0;
+          width: 100%;
+          height: 1px; /* thinner underline */
+          background: var(--color-espresso, #B8734E);
+          display: block;
+          transform: skewX(-30deg) scaleX(0.01);
+          transform-origin: left center;
+          transition: transform .25s ease;
+          will-change: transform;
+          border-radius: 1px;
+          pointer-events: none;
+        }
+        .slant-underline:hover::after,
+        .slant-underline:focus::after {
+          transform: skewX(-30deg) scaleX(1);
+        }
+
       `}</style>
     </div>
   );

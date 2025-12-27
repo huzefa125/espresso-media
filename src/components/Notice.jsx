@@ -9,7 +9,7 @@ import chatIcon from "../assets/icons/chat.png";
 
 export default function GetNoticed() {
   return (
-    <section className="w-full bg-black text-white px-14 py-32 max-lg:px-8 max-sm:px-4 max-sm:py-16 overflow-hidden">
+    <section className="w-full bg-black text-white py-28 max-sm:py-12 overflow-hidden">
 
       {/* ================= HEADING ================= */}
       <motion.h2
@@ -17,8 +17,11 @@ export default function GetNoticed() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="text-center font-serif text-[56px] text-[#E6D3C3] mb-20 
-                   max-lg:text-[46px] max-sm:text-[36px] max-sm:mb-10"
+        className="
+          text-center font-serif text-[56px] text-[#E6D3C3] mb-20
+          max-lg:text-[46px]
+          max-sm:text-[36px] max-sm:mb-12
+        "
       >
         We Help You Get{" "}
         <span className="text-[#C08860] italic">Noticed</span>
@@ -27,9 +30,12 @@ export default function GetNoticed() {
       {/* ================= CARDS ================= */}
       <motion.div
         className="
-          flex items-end justify-center gap-16
-          max-xl:gap-12
-          max-lg:flex-col max-lg:items-center max-lg:gap-16
+          mx-auto max-w-[1440px]
+          flex items-end justify-center
+          gap-10
+          max-xl:gap-10
+          max-lg:flex-col max-lg:items-center max-lg:gap-12
+          px-6 md:px-10 lg:px-0
           max-sm:gap-10
         "
         initial="hidden"
@@ -37,44 +43,36 @@ export default function GetNoticed() {
         viewport={{ once: true }}
         variants={{
           hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.25,
-            },
-          },
+          show: { transition: { staggerChildren: 0.25 } },
         }}
       >
-
-        {/* LEFT CARD */}
         <AnimatedCard>
           <Card
             title="We'll help you get Visible"
             image={leftImg}
             footerIcon={eyeIcon}
             footerText="3.8 Million Views"
-            size="medium"
+            size="side"
           />
         </AnimatedCard>
 
-        {/* CENTER CARD */}
         <AnimatedCard delayBoost>
           <Card
             title="We'll help you Get Qualified Leads"
             image={centerImg}
             footerIcon={trophyIcon}
             footerText="1,242 Qualified Leads in 2 months"
-            size="extra-large"
+            size="center"
           />
         </AnimatedCard>
 
-        {/* RIGHT CARD */}
         <AnimatedCard>
           <Card
             title="We'll help you Drive Engagement"
             image={rightImg}
             footerIcon={chatIcon}
             footerText="722 Comments"
-            size="small"
+            size="side"
           />
         </AnimatedCard>
       </motion.div>
@@ -106,11 +104,11 @@ function AnimatedCard({ children, delayBoost = false }) {
   );
 }
 
-/* ================= CARD COMPONENT ================= */
+/* ================= CARD ================= */
 
 function Card({ title, image, footerIcon, footerText, size }) {
-  const isLarge = size === "extra-large";
- 
+  const isCenter = size === "center";
+
   return (
     <div
       className={`
@@ -118,9 +116,25 @@ function Card({ title, image, footerIcon, footerText, size }) {
         bg-gradient-to-b from-[#3A2419] to-black
         shadow-[0_0_80px_rgba(192,136,96,0.15)]
 
-        ${isLarge
-          ? "w-[700px] max-xl:w-[620px] max-lg:w-[560px] max-sm:w-full p-10 max-sm:p-6"
-          : "w-[360px] max-lg:w-[420px] max-sm:w-full p-8 max-sm:p-6"}
+        ${
+          isCenter
+            ? `
+              w-[520px]
+              max-xl:w-[530px]
+              max-lg:w-[290px]
+              max-md:w-[500px]
+              max-sm:w-full
+              p-10 max-sm:p-6
+            `
+            : `
+              w-[380px]
+              max-xl:w-[250px]
+              max-lg:w-[300px]
+              max-md:w-[300px]
+              max-sm:w-full
+              p-8 max-sm:p-6
+            `
+        }
       `}
     >
       {/* TITLE */}
@@ -128,30 +142,27 @@ function Card({ title, image, footerIcon, footerText, size }) {
         {title}
       </p>
 
-      {/* IMAGE CONTAINER — MOBILE CLEAR FIX */}
+      {/* IMAGE */}
       <div
         className={`
           rounded-2xl flex items-center justify-center
-          ${isLarge
-            ? "h-[420px] max-lg:h-[360px] max-sm:h-[320px]"
-            : "h-[480px] max-lg:h-[320px] max-sm:h-[260px]"}
+          ${
+            isCenter
+              ? "h-[420px] max-lg:h-[250px] max-md:h-[200px] max-sm:h-[220px]"
+              : "h-[480px] max-lg:h-[250px] max-md:h-[200px] max-sm:h-[220px]"
+          }
         `}
       >
         <img
           src={image}
           alt={title}
-          className="
-            w-full h-full
-            object-contain
-            max-w-[95%]
-            max-sm:max-w-[100%]
-          "
+          className="w-full h-full object-contain max-w-[90%]"
         />
       </div>
 
       {/* FOOTER */}
       <div className="flex items-center gap-3 mt-8 text-[#E6D3C3]">
-        <img src={footerIcon} alt="icon" className="w-6 h-6" />
+        <img src={footerIcon} alt="" className="w-6 h-6" />
         <span className="text-base max-sm:text-sm">{footerText}</span>
       </div>
     </div>

@@ -38,7 +38,7 @@ export default function Beyond() {
 
       {/* ================= LOGOS (MASK FADE) ================= */}
       <div
-        className="relative w-full overflow-hidden mt-6"
+        className="relative w-full overflow-hidden mt-8"
         style={{
           WebkitMaskImage:
             "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",

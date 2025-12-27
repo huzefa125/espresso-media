@@ -10,6 +10,8 @@ import CaseStudies from './components/CaseStudies.jsx';
 import Client from "./components/Client.jsx"
 import FAQ from './components/FAQ.jsx';
 import Form from './components/Form.jsx';
+import Footer from './components/Footer.jsx';
+
 function App() {
 
   return (
@@ -44,6 +46,7 @@ function App() {
           <Form />
         </section>
 
+        <Footer />
       </div>
     </>
   )
