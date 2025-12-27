@@ -5,7 +5,7 @@ export default function Footer() {
         {/* Logo + Tagline */}
         <div className="flex-1">
           <h2 className="text-2xl font-serif text-espresso">The Espresso Media</h2>
-          <p className="mt-3 text-sm text-white/80 max-w-sm">Full-funnel growth systems that move inventory and grow revenue for experiential spaces and corporate brands.</p>
+          <p className="mt-3 text-sm text-white/80 max-w-sm">Brewing Digital Success systems that move and grow revenue for experiential spaces and corporate brands.</p>
         </div>
 
         {/* Links */}
@@ -40,8 +40,10 @@ export default function Footer() {
           </a>
 
           <div className="text-xs text-white/60 text-left md:text-right max-w-full md:max-w-[20rem] break-words leading-snug">
-            <p>The Espresso Media, Swati trinity, B906, SP 150 ft ring road, Ahmedabad</p>
+            <p>The Espresso Media, Swati trinity, B906, <br></br> SP 150 ft ring road, Ahmedabad</p>
+            <br />
             <p>Hire Us: <a href="mailto:info@espressomedia.in" className="underline">info@espressomedia.in</a></p>
+            <br />
             <p>Join Us: <a href="mailto:career@espressomedia.in" className="underline">career@espressomedia.in</a></p>
           </div>
         </div>

@@ -6,15 +6,20 @@ export default function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div id="home" className="min-h-[115vh] w-full bg-black relative overflow-hidden font-sans">
-
+    <div
+      id="home"
+      className="
+        min-h-[100vh]
+        lg:min-h-[105vh]
+        xl:min-h-[110vh]
+        w-full bg-black relative overflow-hidden font-sans
+      "
+    >
       {/* ================= BACKGROUND GLOW ================= */}
-      <div
-        className="absolute inset-0 bg-[linear-gradient(135deg,theme(colors.espresso)_0%,transparent_10%),linear-gradient(225deg,theme(colors.espresso)_0%,transparent_7%)]"
-      />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,theme(colors.espresso)_0%,transparent_10%),linear-gradient(225deg,theme(colors.espresso)_0%,transparent_7%)]" />
 
       {/* ================= NAVBAR ================= */}
-      <header className="sticky top-0 z-50 ">
+      <header className="sticky top-0 z-50">
         <div className="flex items-center justify-between px-14 py-6 max-sm:px-6">
 
           {/* LOGO */}
@@ -29,13 +34,9 @@ export default function Hero() {
               { name: "ABOUT US", href: "#beyond" },
               { name: "SERVICES", href: "#services" },
               { name: "TESTIMONIAL", href: "#testimonials" },
-              { name: "CASE STUDIES", href: "#case-studies" }
+              { name: "CASE STUDIES", href: "#case-studies" },
             ].map(item => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="relative slant-underline"
-              >
+              <a key={item.name} href={item.href} className="relative slant-underline">
                 {item.name}
               </a>
             ))}
@@ -53,10 +54,7 @@ export default function Hero() {
           </a>
 
           {/* HAMBURGER */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden text-espresso"
-          >
+          <button onClick={() => setOpen(!open)} className="md:hidden text-espresso">
             <div className="w-6 h-6 flex flex-col justify-center items-center gap-1">
               <span className={`w-5 h-0.5 bg-espresso transition ${open ? "rotate-45 translate-y-1.5" : ""}`} />
               <span className={`w-5 h-0.5 bg-espresso transition ${open ? "opacity-0" : ""}`} />
@@ -66,18 +64,14 @@ export default function Hero() {
         </div>
 
         {/* ================= MOBILE MENU ================= */}
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
           <div className="px-6 py-6 space-y-4 border-t border-espresso/20 bg-black">
             {[
               { name: "HOME", href: "#home" },
               { name: "ABOUT US", href: "#beyond" },
               { name: "SERVICES", href: "#services" },
               { name: "TESTIMONIAL", href: "#testimonials" },
-              { name: "CASE STUDIES", href: "#case-studies" }
+              { name: "CASE STUDIES", href: "#case-studies" },
             ].map(item => (
               <a
                 key={item.name}
@@ -88,7 +82,7 @@ export default function Hero() {
                 {item.name}
               </a>
             ))}
- 
+
             <a
               href="#contact"
               className="block w-full mt-4 px-6 py-3 rounded-full border border-espresso text-espresso tracking-widest text-center"
@@ -102,7 +96,6 @@ export default function Hero() {
 
       {/* ================= HERO CONTENT ================= */}
       <section className="relative z-20 px-14 mt-24 max-w-5xl max-sm:px-6">
-
         <h2 className="font-serif text-[56px] leading-tight text-espresso max-sm:text-[38px]">
           Where Clear <span className="italic font-semibold">Strategy Brews</span>
           <br />
@@ -115,20 +108,33 @@ export default function Hero() {
           and grow revenue for Experiential spaces and corporate brands.
         </p>
 
-        <a href="#contact" className="group relative mt-14 px-10 py-3 rounded-full border border-espresso text-white tracking-widest overflow-hidden inline-block">
+        <a
+          href="#contact"
+          className="group relative mt-14 px-10 py-3 rounded-full border border-espresso text-white tracking-widest overflow-hidden inline-block"
+        >
           <span className="relative z-10">GET IN TOUCH</span>
           <span className="absolute inset-0 bg-gradient-to-r from-espresso to-espressoDark opacity-0 group-hover:opacity-100 transition" />
         </a>
       </section>
 
       {/* ================= TABLET + WAVE ================= */}
-      <div className="absolute inset-x-0 bottom-0 h-[400px] pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 h-[320px] xl:h-[360px] pointer-events-none">
+        {/* Wave */}
         <div className="absolute left-0 w-full z-20">
           <img src={waveImg} alt="wave" className="w-full object-cover" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 md:bottom-20 sm:bottom-75 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        {/* Tablet */}
+        <div
+          className="
+            absolute left-1/2
+            bottom-12 xl:bottom-16 2xl:bottom-20
+            -translate-x-1/2
+            z-10
+            animate-[fadeInUp_1.2s_ease-out_1s_both]
+          "
+        >
           <img src={tabImg} alt="tablet" className="w-[840px] max-sm:w-[350px]" />
         </div>
       </div>
@@ -140,28 +146,21 @@ export default function Hero() {
           to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Slanted (leaning) underline for nav links */
         .slant-underline::after {
           content: "";
           position: absolute;
-          bottom: -0.2rem; /* slightly closer to baseline */
+          bottom: -0.2rem;
           left: 0;
           width: 100%;
-          height: 1px; /* thinner underline */
+          height: 1px;
           background: var(--color-espresso, #B8734E);
-          display: block;
           transform: skewX(-30deg) scaleX(0.01);
           transform-origin: left center;
           transition: transform .25s ease;
-          will-change: transform;
-          border-radius: 1px;
-          pointer-events: none;
         }
-        .slant-underline:hover::after,
-        .slant-underline:focus::after {
+        .slant-underline:hover::after {
           transform: skewX(-30deg) scaleX(1);
         }
-
       `}</style>
     </div>
   );
