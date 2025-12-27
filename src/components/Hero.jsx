@@ -22,27 +22,18 @@ export default function Hero() {
       <header className="sticky top-0 z-50">
         <div className="flex items-center justify-between px-14 py-6 max-sm:px-6">
 
-          {/* LOGO */}
           <h1 className="text-xl font-serif text-espresso max-sm:text-3xl">
             The Espresso Media
           </h1>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-6 px-8 py-2 rounded-full border border-espresso text-espresso text-sm tracking-widest">
-            {[
-              { name: "HOME", href: "#home" },
-              { name: "ABOUT US", href: "#beyond" },
-              { name: "SERVICES", href: "#services" },
-              { name: "TESTIMONIAL", href: "#testimonials" },
-              { name: "CASE STUDIES", href: "#case-studies" },
-            ].map(item => (
-              <a key={item.name} href={item.href} className="relative slant-underline">
-                {item.name}
+            {["HOME","ABOUT US","SERVICES","TESTIMONIAL","CASE STUDIES"].map(item => (
+              <a key={item} href="#" className="relative slant-underline">
+                {item}
               </a>
             ))}
           </nav>
 
-          {/* DESKTOP CTA */}
           <a
             href="#contact"
             className="hidden md:flex group relative px-7 py-3 rounded-full border border-espresso text-white text-sm tracking-wide overflow-hidden"
@@ -53,44 +44,13 @@ export default function Hero() {
             <span className="absolute inset-0 bg-gradient-to-r from-espresso to-espressoDark opacity-0 group-hover:opacity-100 transition" />
           </a>
 
-          {/* HAMBURGER */}
           <button onClick={() => setOpen(!open)} className="md:hidden text-espresso">
-            <div className="w-6 h-6 flex flex-col justify-center items-center gap-1">
-              <span className={`w-5 h-0.5 bg-espresso transition ${open ? "rotate-45 translate-y-1.5" : ""}`} />
-              <span className={`w-5 h-0.5 bg-espresso transition ${open ? "opacity-0" : ""}`} />
-              <span className={`w-5 h-0.5 bg-espresso transition ${open ? "-rotate-45 -translate-y-1.5" : ""}`} />
+            <div className="w-6 h-6 flex flex-col gap-1">
+              <span className={`w-5 h-0.5 bg-espresso transition ${open && "rotate-45 translate-y-1.5"}`} />
+              <span className={`w-5 h-0.5 bg-espresso transition ${open && "opacity-0"}`} />
+              <span className={`w-5 h-0.5 bg-espresso transition ${open && "-rotate-45 -translate-y-1.5"}`} />
             </div>
           </button>
-        </div>
-
-        {/* ================= MOBILE MENU ================= */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-          <div className="px-6 py-6 space-y-4 border-t border-espresso/20 bg-black">
-            {[
-              { name: "HOME", href: "#home" },
-              { name: "ABOUT US", href: "#beyond" },
-              { name: "SERVICES", href: "#services" },
-              { name: "TESTIMONIAL", href: "#testimonials" },
-              { name: "CASE STUDIES", href: "#case-studies" },
-            ].map(item => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block text-espresso text-lg py-2 border-b border-espresso/20"
-                onClick={() => setOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-
-            <a
-              href="#contact"
-              className="block w-full mt-4 px-6 py-3 rounded-full border border-espresso text-espresso tracking-widest text-center"
-              onClick={() => setOpen(false)}
-            >
-              CONTACT US
-            </a>
-          </div>
         </div>
       </header>
 
@@ -118,18 +78,26 @@ export default function Hero() {
       </section>
 
       {/* ================= TABLET + WAVE ================= */}
-      <div className="absolute inset-x-0 bottom-0 h-[320px] xl:h-[360px] pointer-events-none">
-        {/* Wave */}
-        <div className="absolute left-0 w-full z-20">
+      <div className="absolute inset-x-0 bottom-0 h-[300px] xl:h-[360px] pointer-events-none">
+
+        {/* WAVE (flattened on md) */}
+        <div
+          className="
+            absolute left-0 w-full z-20
+            transform origin-bottom
+            md:scale-y-[0.6]
+            lg:scale-y-100
+          "
+        >
           <img src={waveImg} alt="wave" className="w-full object-cover" />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        {/* Tablet */}
+        {/* TABLET */}
         <div
           className="
             absolute left-1/2
-            bottom-12 xl:bottom-16 2xl:bottom-20
+            bottom-12 xl:bottom-16
             -translate-x-1/2
             z-10
             animate-[fadeInUp_1.2s_ease-out_1s_both]
@@ -139,27 +107,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ================= KEYFRAMES & NAV UNDERLINE ================= */}
+      {/* ================= KEYFRAMES ================= */}
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(50px); }
           to { opacity: 1; transform: translateY(0); }
-        }
-
-        .slant-underline::after {
-          content: "";
-          position: absolute;
-          bottom: -0.2rem;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background: var(--color-espresso, #B8734E);
-          transform: skewX(-30deg) scaleX(0.01);
-          transform-origin: left center;
-          transition: transform .25s ease;
-        }
-        .slant-underline:hover::after {
-          transform: skewX(-30deg) scaleX(1);
         }
       `}</style>
     </div>
