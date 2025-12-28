@@ -119,26 +119,26 @@ function Card({ title, image, footerIcon, footerText, size }) {
         ${
           isCenter
             ? `
-              w-[520px]
-              max-xl:w-[530px]
-              max-lg:w-[290px]
-              max-md:w-[500px]
-              max-sm:w-full
-              p-10 max-sm:p-6
-            `
-            : `
-              w-[380px]
-              max-xl:w-[250px]
-              max-lg:w-[300px]
+              w-[480px]
+              max-xl:w-[450px]
+              max-lg:w-[220px]
               max-md:w-[300px]
               max-sm:w-full
-              p-8 max-sm:p-6
+              p-6 max-sm:p-4
+            `
+            : `
+              w-[300px]
+              max-xl:w-[200px]
+              max-lg:w-[200px]
+              max-md:w-[200px]
+              max-sm:w-full
+              p-4 max-sm:p-3
             `
         }
       `}
     >
       {/* TITLE */}
-      <p className="text-[#E6D3C3] text-sm tracking-wide mb-6">
+      <p className="text-[#E6D3C3] text-sm tracking-wide mb-4">
         {title}
       </p>
 
@@ -148,21 +148,21 @@ function Card({ title, image, footerIcon, footerText, size }) {
           rounded-2xl flex items-center justify-center
           ${
             isCenter
-              ? "h-[460px] max-lg:h-[250px] max-md:h-[200px] max-sm:h-[220px]"
-              : "h-[480px] max-lg:h-[250px] max-md:h-[200px] max-sm:h-[220px]"
+              ? "h-[300px] max-lg:h-[220px] max-md:h-[150px] max-sm:h-[150px]"
+              : "h-[300px] max-lg:h-[120px] max-md:h-[100px] max-sm:h-[110px]"
           }
         `}
       >
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-contain max-w-[90%]"
+          className="w-full h-full object-contain max-w-[80%]"
         />
       </div>
 
       {/* FOOTER */}
-      <div className="flex items-center gap-3 mt-8 text-[#E6D3C3]">
-        <img src={footerIcon} alt="" className="w-6 h-6" />
+      <div className="flex items-center gap-3 mt-6 text-[#E6D3C3]">
+        <img src={footerIcon} alt="" className="w-5 h-5" />
         <span className="text-base max-sm:text-sm">{footerText}</span>
       </div>
     </div>
