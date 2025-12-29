@@ -101,7 +101,7 @@ export default function Hero() {
       </header>
 
       {/* ================= HERO CONTENT ================= */}
-      <section className="relative z-20 px-14 mt-24 max-w-5xl max-sm:px-6">
+      <section className="relative z-20 px-7 mt-15 max-w-5xl max-sm:px-6">
 
         <h2 className="font-serif text-[56px] leading-tight text-espresso max-sm:text-[38px]">
           Where Clear <span className="italic font-semibold">Strategy Brews</span>
