@@ -6,7 +6,7 @@ export default function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div id="home" className="min-h-[115vh] md:min-h-[140vh] w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-[115vh] md:min-h-[145vh] lg:min-h-[120vh] w-full bg-black relative overflow-hidden font-sans">
 
       {/* ================= BACKGROUND GLOW ================= */}
       <div
@@ -101,7 +101,7 @@ export default function Hero() {
       </header>
 
       {/* ================= HERO CONTENT ================= */}
-      <section className="relative z-20 px-7 mt-15 max-w-5xl max-sm:px-6">
+      <section className="relative z-20 px-7 mt-5 max-w-5xl max-sm:px-6">
 
         <h2 className="font-serif text-[56px] leading-tight text-espresso max-sm:text-[38px]">
           Where Clear <span className="italic font-semibold">Strategy Brews</span>
@@ -125,10 +125,10 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-[400px] pointer-events-none">
         <div className="absolute left-0 w-full z-20">
           <img src={waveImg} alt="wave" className="w-full object-cover" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-50 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 md:bottom-20 sm:bottom-75 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute left-1/2 md:bottom-20 sm:bottom-20 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <img src={tabImg} alt="tablet" className="w-[640px] max-sm:w-[350px]" />
         </div>
       </div>
