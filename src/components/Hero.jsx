@@ -6,7 +6,7 @@ export default function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div id="home" className="min-h-[115vh] md:min-h-[145vh]  w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-[115vh] md:min-h-[140vh]  w-full bg-black relative overflow-hidden font-sans">
 
       {/* ================= BACKGROUND GLOW ================= */}
       <div
@@ -129,7 +129,7 @@ export default function Hero() {
         </div>
 
         <div className="absolute left-1/2 md:bottom-20 sm:bottom-20 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
-          <img src={tabImg} alt="tablet" className="w-[640px] max-sm:w-[350px]" />
+          <img src={tabImg} alt="tablet" className="w-[40vw] sm:w-[350px] md:w-[640px] max-w-[640px]" />
         </div>
       </div>
 
