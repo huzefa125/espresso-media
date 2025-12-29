@@ -6,7 +6,7 @@ export default function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div id="home" className="min-h-[115vh] md:min-h-[145vh] lg:min-h-[120vh] w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-[115vh] md:min-h-[145vh]  w-full bg-black relative overflow-hidden font-sans">
 
       {/* ================= BACKGROUND GLOW ================= */}
       <div
