@@ -128,8 +128,8 @@ export default function Hero() {
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 md:bottom-20 sm:bottom-75 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
-          <img src={tabImg} alt="tablet" className="w-[840px] max-sm:w-[350px]" />
+        <div className="absolute left-1/2 md:bottom-10 sm:bottom-75 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+          <img src={tabImg} alt="tablet" className="w-[700px] max-sm:w-[550px]" />
         </div>
       </div>
 
