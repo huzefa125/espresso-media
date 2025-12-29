@@ -148,7 +148,7 @@ function Card({ title, image, footerIcon, footerText, size }) {
           rounded-2xl flex items-center justify-center
           ${
             isCenter
-              ? "h-[300px] max-lg:h-[220px] max-md:h-[150px] max-sm:h-[150px]"
+              ? "h-[280px] max-lg:h-[220px] max-md:h-[150px] max-sm:h-[150px]"
               : "h-[300px] max-lg:h-[120px] max-md:h-[100px] max-sm:h-[110px]"
           }
         `}
