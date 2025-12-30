@@ -1,8 +1,34 @@
+@font-face {
+  font-family: 'TNR-Condensed';
+  src: url('./assets/fonts/TimesNewRomanMTStdCondensed.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TNR-Condensed';
+  src: url('./assets/fonts/TimesNewRomanMTStdCondensedItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 
 @theme {
   --color-espresso: #B8734E;
   --color-espresso-dark: #8F5536;
+  --font-family-tnr: 'TNR-Condensed', "Playfair Display", serif;
   --font-family-serif: "Playfair Display", serif;
   --font-family-sans: "Inter", sans-serif;
 }
+
+/* Apply globally - default to the sans stack, override per-component when needed */
+body {
+  font-family: var(--font-family-sans);
+}
+
+/* Explicit helper class (use in markup if you prefer not to use the Tailwind utility) */
+.font-tnr {
+  font-family: var(--font-family-tnr) !important;
+} 

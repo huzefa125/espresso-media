@@ -1,6 +1,6 @@
 import { useState } from "react";
 import tabImg from "../assets/mobile/tab.png";
-import waveImg from "../assets/mobile/UPWARD GRAPH.png";
+import waveImg from "../assets/mobile/graph.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -101,9 +101,9 @@ export default function Hero() {
       </header>
 
       {/* ================= HERO CONTENT ================= */}
-      <section className="relative z-20 px-7 mt-5 max-w-5xl max-sm:px-6">
+      <section className="relative z-20 px-7 mt-5 max-w-5xl md:ml-17  max-sm:px-6">
 
-        <h2 className="font-serif text-[56px] leading-tight text-espresso max-sm:text-[38px]">
+        <h2 className="font-serif text-[50px] leading-tight text-espresso max-sm:text-[38px]">
           Where Clear <span className="italic font-semibold">Strategy Brews</span>
           <br />
           Scalable <span className="italic font-semibold">Growth</span>
@@ -115,21 +115,21 @@ export default function Hero() {
           and grow revenue for Experiential spaces and corporate brands.
         </p>
 
-        <a href="#contact" className="group relative mt-14 px-10 py-3 rounded-full border border-espresso text-white tracking-widest overflow-hidden inline-block">
+        <a href="#contact" className="group relative mt-7 px-10 py-3 rounded-full border border-espresso text-white tracking-widest overflow-hidden inline-block">
           <span className="relative z-10">GET IN TOUCH</span>
           <span className="absolute inset-0 bg-gradient-to-r from-espresso to-espressoDark opacity-0 group-hover:opacity-100 transition" />
         </a>
       </section>
 
       {/* ================= TABLET + WAVE ================= */}
-      <div className="absolute inset-x-0 bottom-0 h-[400px] pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 h-[300px] pointer-events-none">
         <div className="absolute left-0 w-full z-20">
-          <img src={waveImg} alt="wave" className="w-full object-cover" />
+          <img src={waveImg} alt="wave" className="w-full object-cover w-full [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
           <div className="absolute inset-x-0 bottom-0 h-50 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 md:bottom-20 sm:bottom-20 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
-          <img src={tabImg} alt="tablet" className="w-[40vw] sm:w-[350px] md:w-[640px] max-w-[640px]" />
+        <div className="absolute left-1/2 md:bottom-10 sm:bottom-20 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+          <img src={tabImg} alt="tablet" className="w-[40vw] sm:w-[450px] md:w-[700px] max-w-[780px]" />
         </div>
       </div>
 
