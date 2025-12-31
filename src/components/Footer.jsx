@@ -26,7 +26,7 @@ export default function Footer() {
 
         {/* RIGHT */}
         <div className="text-center md:text-right md:ml-35">
-          <h3 className="text-xl font-semibold mb-4">Connect</h3>
+          <h3 className="text-xl font-semibold ">Connect</h3>
           <div className="text-white/80 leading-7 ">
             <p>
               <span className="text-white font-semibold">Hire Us :</span>{" "}
@@ -34,13 +34,13 @@ export default function Footer() {
                 info@espressomedia.in
               </a>
             </p>
-            <p className="mt-2">
+            <p className="">
               <span className="text-white font-semibold">Join Us :</span>{" "}
               <a href="mailto:career@espressomedia.in" className="hover:underline">
                 career@espressomedia.in
               </a>
             </p>
-            <p className="mt-2">
+            <p className="">
               <span className="text-white font-semibold">Contact us :</span>{" "}
               <a href="tel:+918758117559" className="hover:underline">
                 +91 87581 17559

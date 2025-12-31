@@ -18,9 +18,7 @@ export default function OurProcess() {
         {[1, 2, 3, 4].map((num, idx) => (
           <div
             key={num}
-            className="relative h-[350px] rounded-2xl overflow-hidden
-                       bg-gradient-to-br from-[#1a120d] to-[#0b0806]
-                      "
+            className="relative h-[350px] rounded-2xl overflow-hidden"
           >
 
             {/* IMAGE */}

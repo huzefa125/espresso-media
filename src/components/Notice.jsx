@@ -122,7 +122,7 @@ function Card({ title, image, footerIcon, footerText, size }) {
               max-xl:w-[450px]
               max-lg:w-[220px]
               max-md:w-[300px]
-              max-sm:w-full
+              max-sm:w-[380px]
               p-6 max-sm:p-4
             `
             : `
@@ -130,14 +130,14 @@ function Card({ title, image, footerIcon, footerText, size }) {
               max-xl:w-[200px]
               max-lg:w-[200px]
               max-md:w-[200px]
-              max-sm:w-full
+              max-sm:w-[380px]
               p-4 max-sm:p-3
             `
         }
       `}
     >
       {/* TITLE */}
-      <p className="text-[#E6D3C3] text-sm tracking-wide mb-3 px-2 whitespace-nowrap truncate max-w-full">
+      <p className="text-[#E6D3C3] text-sm tracking-wide mb-3 px-2">
         {title}
       </p>
 
@@ -147,15 +147,15 @@ function Card({ title, image, footerIcon, footerText, size }) {
           rounded-2xl flex items-center justify-center
           ${
             isCenter
-              ? "h-[280px] max-lg:h-[220px] max-md:h-[150px] max-sm:h-[150px]"
-              : "h-[300px] max-lg:h-[120px] max-md:h-[100px] max-sm:h-[110px]"
+              ? "h-[280px] max-lg:h-[220px] max-md:h-[150px] max-sm:h-[320px]"
+              : "h-[300px] max-lg:h-[120px] max-md:h-[100px] max-sm:h-[280px]"
           }
         `}
       >
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-contain max-w-[95%]"
+          className="w-auto h-full object-contain max-w-[95%] max-sm:max-w-[70%] max-sm:h-[86%] max-sm:mx-auto"
         />
       </div>
 

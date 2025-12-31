@@ -139,8 +139,12 @@ export default function Hero() {
           and grow revenue for Experiential spaces and corporate brands.
         </p>
 
-        <a href="#contact" className="group relative mt-7 px-10 py-3 rounded-full border border-espresso text-white tracking-widest overflow-hidden inline-block">
-          <span className="relative z-10 text-lg md:text-xl">GET IN TOUCH</span>
+        <a
+          href="#contact"
+          className="group relative mt-7 px-5 sm:px-4 md:px-5 py-3 max-sm:py-2 max-sm:rounded-md rounded-full border border-espresso text-white tracking-widest max-sm:tracking-wide overflow-hidden inline-block text-center active:scale-95 transition-transform"
+          aria-label="Get in touch"
+        >
+          <span className="relative z-10 text-base max-sm:text-sm sm:text-lg md:text-xl">GET IN TOUCH</span>
           <span className="absolute inset-0 bg-gradient-to-r from-espresso to-espressoDark opacity-0 group-hover:opacity-100 transition" />
         </a>
       </section>
@@ -152,7 +156,7 @@ export default function Hero() {
           <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 bottom-50 sm:bottom-32 md:bottom-10 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute left-1/2 bottom-50 sm:bottom-32 md:bottom-3 -translate-x-2/4 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
               src={tabImg}

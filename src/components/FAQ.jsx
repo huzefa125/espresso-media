@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 const faqs = [
-  {
-    q: "Do you only provide service on digital marketing?",
-    a: "No. We design and operate growth systems. Digital marketing is just one execution layer. Our work starts with positioning, messaging, and strategy — then extends into creative, content, funnels, and performance execution. Everything we do is engineered around one outcome: reach your primary goal.",
-  },
+
   {
     q: "How is your approach different from other agencies?",
     a: "Most agencies sell services. We build and manage growth systems. That means we don’t run isolated campaigns or chase trends. We design a structured ecosystem — from brand positioning to customer acquisition and conversion — with one clear goal: consistent, predictable results. Every move is intentional, measured, and tied to business outcomes.",
@@ -54,7 +51,7 @@ export default function FAQ() {
               {/* QUESTION */}
               <button
                 onClick={() => toggle(i)}
-                className="w-full flex justify-between items-center py-10 text-[20px] font-medium font-serif"
+                className="w-full flex justify-between items-center py-10 text-[20px] "
               >
                 {item.q}
                 <span className="text-[#C08860] text-2xl ml-4">{isOpen ? '−' : '+'}</span>
@@ -66,7 +63,7 @@ export default function FAQ() {
                   isOpen ? "max-h-40 pb-8" : "max-h-0"
                 }`}
               >
-                <p className="text-gray-300 text-[16px] leading-relaxed font-normal font-serif">
+                <p className="text-gray-300 text-[16px] leading-relaxed ">
                   {item.a}
                 </p>
               </div>
