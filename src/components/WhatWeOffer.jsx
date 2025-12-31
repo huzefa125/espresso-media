@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import brandingIcon from "../assets/fa/branding.png";
 import contentIcon from "../assets/fa/ai.png";
 import socialIcon from "../assets/fa/social.png";
+import performanceIcon from "../assets/fa/per.png";
+import automationIcon from "../assets/fa/leads.png";
 
 const services = [
   {
@@ -23,6 +25,18 @@ const services = [
     description:
       "Data-driven social media strategies designed to increase reach, engagement, and qualified leads.",
     icon: socialIcon,
+  },
+  {
+    title: "Performance Marketing",
+    description:
+      "Throwing money aimlessly into ads that barely drive results doesn’t happen here. Each campaign is executed with a clear goal, tracked in real time, and optimized to deliver measurable business results.",
+    icon: performanceIcon,
+  },
+  {
+    title: "AI Automation",
+    description:
+      "Lead capture, follow-ups, and internal workflows are automated so no inquiry is ever missed. This reduces manual effort, speeds up response time, and improves lead-to-sale conversion.",
+    icon: automationIcon,
   },
 ];
 
@@ -136,7 +150,7 @@ export default function WhatWeOffer() {
                   opacity: isOpen ? 1 : 0,
                 }}
               >
-                <p className="px-6 py-4 pl-20 max-sm:px-4 text-xl max-sm:pl-0 text-gray-300">
+                <p className="px-6 py-4 pl-20 max-sm:px-4 text-xl max-sm:pl-0 text-gray-300 font-normal font-serif">
                   {item.description}
                 </p>
               </div>

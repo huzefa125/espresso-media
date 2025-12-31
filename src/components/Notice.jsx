@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import leftImg from "../assets/Notice/visibility.png";
 import centerImg from "../assets/Notice/leads.png";
 import rightImg from "../assets/Notice/engagement.png";
-import eyeIcon from "../assets/icons/open-eye.png";
-import trophyIcon from "../assets/icons/trophy.png";
-import chatIcon from "../assets/icons/chat.png";
+import viewsIcon from "../assets/icons/views.png";
+import leadsIcon from "../assets/icons/leads.png";
+import commentsIcon from "../assets/icons/coments.png";
 
 export default function GetNoticed() {
   return (
@@ -50,7 +50,7 @@ export default function GetNoticed() {
           <Card
             title="We'll help you get Visible"
             image={leftImg}
-            footerIcon={eyeIcon}
+            footerIcon={viewsIcon}
             footerText="3.8 Million Views"
             size="side"
           />
@@ -60,7 +60,7 @@ export default function GetNoticed() {
           <Card
             title="We'll help you Get Qualified Leads"
             image={centerImg}
-            footerIcon={trophyIcon}
+            footerIcon={leadsIcon}
             footerText="1,242 Qualified Leads in 2 months"
             size="center"
           />
@@ -70,7 +70,7 @@ export default function GetNoticed() {
           <Card
             title="We'll help you Drive Engagement"
             image={rightImg}
-            footerIcon={chatIcon}
+            footerIcon={commentsIcon}
             footerText="722 Comments"
             size="side"
           />
@@ -156,7 +156,7 @@ function Card({ title, image, footerIcon, footerText, size }) {
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-contain max-w-[80%]"
+          className="w-full h-full object-contain max-w-[95%]"
         />
       </div>
 

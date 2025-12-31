@@ -2,20 +2,28 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "A fast-growing brand was sitting on deadstock for over 1.5 years,",
-    a: "Within 2 months of launching a structured growth system, the entire deadstock was cleared while qualified inquiries and showroom walk-ins increased consistently.",
+    q: "Do you only provide service on digital marketing?",
+    a: "No. We design and operate growth systems. Digital marketing is just one execution layer. Our work starts with positioning, messaging, and strategy — then extends into creative, content, funnels, and performance execution. Everything we do is engineered around one outcome: reach your primary goal.",
   },
   {
-    q: "A fast-growing brand was sitting on deadstock for over 1.5 years,",
-    a: "We implemented a full-funnel strategy combining content, performance marketing, and automation to unlock consistent growth.",
+    q: "How is your approach different from other agencies?",
+    a: "Most agencies sell services. We build and manage growth systems. That means we don’t run isolated campaigns or chase trends. We design a structured ecosystem — from brand positioning to customer acquisition and conversion — with one clear goal: consistent, predictable results. Every move is intentional, measured, and tied to business outcomes.",
   },
   {
-    q: "A fast-growing brand was sitting on deadstock for over 1.5 years,",
-    a: "Clear ownership, systems-driven execution, and measurable outcomes ensured results beyond vanity metrics.",
+    q: "What's the minimum retainer period?",
+    a: "We require a minimum commitment of 3 months (90 days) for all retainers. This timeline allows us to build a strong growth foundation, implement our proven systems, and deliver measurable results for your business.",
   },
   {
-    q: "A fast-growing brand was sitting on deadstock for over 1.5 years,",
-    a: "The focus was on revenue impact — not just reach, likes, or impressions.",
+    q: "Will you handle everything or do we need an internal team?",
+    a: "We handle strategy, creative, execution, and optimization end-to-end. Your role is simple: approvals, insights, and alignment. Everything else is managed by our team.",
+  },
+  {
+    q: "Is this suitable for new brands or only established ones?",
+    a: "Both. We help new brands build strong market presence from day one, and we help established brands remove inefficiencies, scale faster, and unlock the next level of growth.",
+  },
+  {
+    q: "How do we get started?",
+    a: "It begins with a strategy call where we understand your goals, challenges, and growth potential. If there’s alignment, we design a custom roadmap tailored to your business.",
   },
 ]; 
 
@@ -46,7 +54,7 @@ export default function FAQ() {
               {/* QUESTION */}
               <button
                 onClick={() => toggle(i)}
-                className="w-full flex justify-between items-center py-10 text-[20px] font-medium"
+                className="w-full flex justify-between items-center py-10 text-[20px] font-medium font-serif"
               >
                 {item.q}
                 <span className="text-[#C08860] text-2xl ml-4">{isOpen ? '−' : '+'}</span>
@@ -58,7 +66,7 @@ export default function FAQ() {
                   isOpen ? "max-h-40 pb-8" : "max-h-0"
                 }`}
               >
-                <p className="text-gray-300 text-[16px] leading-relaxed">
+                <p className="text-gray-300 text-[16px] leading-relaxed font-normal font-serif">
                   {item.a}
                 </p>
               </div>

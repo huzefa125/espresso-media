@@ -1,9 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import tabImg from "../assets/mobile/tab.png";
 import waveImg from "../assets/mobile/graph.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
+  const [views, setViews] = useState(0);
+
+  useEffect(() => {
+    const target = 6000000;
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+
+    const interval = setInterval(() => {
+      current += increment;
+
+      if (current >= target) {
+        setViews(target);
+        clearInterval(interval);
+      } else {
+        setViews(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(interval);
+  }, []);
+  const formatMillion = (num) => {
+    if (num >= 1_000_000) {
+      return (num / 1_000_000).toFixed(1).replace(".0", "") + " M";
+    }
+    return num.toLocaleString();
+  };
 
   return (
     <div id="home" className="min-h-screen md:min-h-[120vh] lg:min-h-[115vh] w-full bg-black relative overflow-hidden font-sans">
@@ -67,9 +95,8 @@ export default function Hero() {
 
         {/* ================= MOBILE MENU ================= */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="px-6 py-6 space-y-4 border-t border-espresso/20 bg-black">
             {[
@@ -88,7 +115,7 @@ export default function Hero() {
                 {item.name}
               </a>
             ))}
- 
+
             <a
               href="#contact"
               className="block w-full mt-4 px-6 py-3 rounded-full border border-espresso text-espresso tracking-widest text-center"
@@ -102,11 +129,11 @@ export default function Hero() {
 
       {/* ================= HERO CONTENT ================= */}
       <section className="relative z-20 px-7 mt-5 max-w-5xl md:ml-17  max-sm:px-6">
+        {/* Where Strategy Is Brewed Into Measurable Results */}
 
         <h2 className="font-serif text-[50px] leading-tight text-espresso max-sm:text-[38px]">
-          Where Clear <span className="italic font-semibold">Strategy Brews</span>
-          <br />
-          Scalable <span className="italic font-semibold">Growth</span>
+          Where Strategy Is <span className="italic font-semibold">Brewed <br /></span>Into Measurable Results
+          <br /><span className="italic font-semibold"></span>
         </h2>
 
         <p className="mt-10 max-w-3xl text-white text-2xl leading-relaxed max-sm:text-lg">
@@ -116,7 +143,7 @@ export default function Hero() {
         </p>
 
         <a href="#contact" className="group relative mt-7 px-10 py-3 rounded-full border border-espresso text-white tracking-widest overflow-hidden inline-block">
-          <span className="relative z-10">GET IN TOUCH</span>
+          <span className="relative z-10 text-lg md:text-xl">GET IN TOUCH</span>
           <span className="absolute inset-0 bg-gradient-to-r from-espresso to-espressoDark opacity-0 group-hover:opacity-100 transition" />
         </a>
       </section>
@@ -128,8 +155,42 @@ export default function Hero() {
           <div className="absolute inset-x-0 bottom-0 h-50 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 md:bottom-10 sm:bottom-20 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
-          <img src={tabImg} alt="tablet" className="w-[40vw] sm:w-[450px] md:w-[700px] max-w-[780px]" />
+        <div className="
+  absolute 
+  left-1/2 
+  bottom-45          /* 🔹 mobile: tablet upar */
+  sm:bottom-32       /* 🔹 small tablet: thoda aur upar */
+  md:bottom-10       /* ✅ md unchanged */
+  -translate-x-1/2 
+  z-10 
+  animate-[fadeInUp_1.2s_ease-out_1s_both]
+">
+
+          <div className="relative">
+            <img
+              src={tabImg}
+              alt="tablet"
+              className="
+      w-[85vw]        /* 🔹 mobile: bigger tablet */
+      sm:w-[520px]    /* 🔹 small tablets */
+      md:w-[700px]    /* ✅ unchanged */
+      max-w-[780px]   /* ✅ unchanged */
+    "
+            />
+
+            {/* Overlay inside tablet: Views label + 6 Million */}
+            <div
+              aria-hidden="true"
+              className="absolute left-[28%] top-[28%] -translate-x-1/2 text-center pointer-events-none"
+              style={{ transformOrigin: 'center' }}
+            >
+
+              <div className="text-lg md:text-2xl font-serif text-white font-semibold tabular-nums">
+                {formatMillion(views)}
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
 

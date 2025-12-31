@@ -28,10 +28,10 @@ export default function Beyond() {
         Beyond the likes...
       </h3>
 
-      <p className="max-w-6xl mx-auto text-center text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-[1.6] py-8 md:py-12 lg:py-16 text-white font-light">
-        Our team ensures your brand stands out among your target market,
-        generating qualified leads and walk-ins through marketing execution
-        all managed end-to-end, allowing you to focus on strategic priorities.
+      <p className="max-w-6xl mx-auto text-center text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-[1.6] py-8 md:py-12 lg:py-16 text-white font-normal font-serif">
+        We design and execute full-funnel growth systems that connect brand, content, performance, and automation. So marketing doesn't just look good, it moves inventory and drives revenue.
+        <br />
+        Founder-led and systems-driven, ownership is taken across strategy and execution to deliver clarity, accountability, and control at every stage of growth.
       </p>
  
       <States />
