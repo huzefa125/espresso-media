@@ -45,7 +45,6 @@ function App() {
         <section id="contact">
           <Form />
         </section>
-
         <Footer />
       </div>
     </>

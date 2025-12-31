@@ -29,9 +29,7 @@ export default function Beyond() {
       </h3>
 
       <p className="max-w-6xl mx-auto text-center text-lg md:text-xl lg:text-2xl xl:text-[26px] leading-[1.6] py-8 md:py-12 lg:py-16 text-white font-normal font-serif">
-        We design and execute full-funnel growth systems that connect brand, content, performance, and automation. So marketing doesn't just look good, it moves inventory and drives revenue.
-        <br />
-        Founder-led and systems-driven, ownership is taken across strategy and execution to deliver clarity, accountability, and control at every stage of growth.
+       From brand creation to revenue execution, we design strategy-led growth systems anchored in refined aesthetics that build visibility and convert it into qualified leads and walk-ins—with measurable business outcomes. 
       </p>
  
       <States />

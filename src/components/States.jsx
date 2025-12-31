@@ -35,8 +35,13 @@ const States = () => {
 
   const Stat = ({ value, label }) => (
     <div className="text-center px-4">
-      <div className="text-[#C08860] text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-bold leading-none mb-4">
-        {value}
+      <div className="text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-bold leading-none mb-4">
+        <span className="text-7xl md:text-5xl lg:text-7xl leading-none select-none
+                           bg-gradient-to-b from-espresso-dark via-espresso to-espresso-dark 
+                           bg-clip-text text-transparent">
+          {value}
+        </span>
+
       </div>
       <div className="text-xs md:text-sm tracking-[0.25em] text-gray-400 font-light">
         {label}
@@ -67,5 +72,4 @@ const States = () => {
     </motion.div>
   );
 };
-
 export default States;

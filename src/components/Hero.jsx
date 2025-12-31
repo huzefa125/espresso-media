@@ -36,12 +36,12 @@ export default function Hero() {
   return (
     <div id="home" className="min-h-screen md:min-h-[120vh] lg:min-h-[115vh] w-full bg-black relative overflow-hidden font-sans">
 
-      {/* ================= BACKGROUND GLOW ================= */}
+
       <div
         className="absolute inset-0 bg-[linear-gradient(135deg,theme(colors.espresso)_0%,transparent_10%),linear-gradient(225deg,theme(colors.espresso)_0%,transparent_7%)]"
       />
 
-      {/* ================= NAVBAR ================= */}
+
       <header className="sticky top-0 z-50 ">
         <div className="flex items-center justify-between px-14 py-6 max-sm:px-6">
 
@@ -49,9 +49,7 @@ export default function Hero() {
           <h1 className="text-xl font-serif text-espresso max-sm:text-3xl">
             The Espresso Media
           </h1>
-
-          {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center gap-6 px-8 py-2 rounded-full border border-espresso text-espresso text-sm tracking-widest">
+          <nav className="hidden md:flex ml-auto gap-11 px-6 py-2 rounded-full border border-espresso text-espresso text-sm tracking-widest">
             {[
               { name: "HOME", href: "#home" },
               { name: "ABOUT US", href: "#beyond" },
@@ -69,10 +67,10 @@ export default function Hero() {
             ))}
           </nav>
 
-          {/* DESKTOP CTA */}
+
           <a
             href="#contact"
-            className="hidden md:flex group relative px-7 py-3 rounded-full border border-espresso text-white text-sm tracking-wide overflow-hidden"
+            className="hidden md:flex group relative px-4 py-3 rounded-full border border-espresso text-white text-sm tracking-wide overflow-hidden ml-6"
           >
             <span className="relative z-10 flex items-center gap-2">
               CONTACT US <span className="group-hover:translate-x-1 transition">↗</span>
@@ -80,7 +78,6 @@ export default function Hero() {
             <span className="absolute inset-0 bg-gradient-to-r from-espresso to-espressoDark opacity-0 group-hover:opacity-100 transition" />
           </a>
 
-          {/* HAMBURGER */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-espresso"
@@ -127,7 +124,7 @@ export default function Hero() {
         </div>
       </header>
 
-      {/* ================= HERO CONTENT ================= */}
+
       <section className="relative z-20 px-7 mt-5 max-w-5xl md:ml-17  max-sm:px-6">
         {/* Where Strategy Is Brewed Into Measurable Results */}
 
@@ -155,17 +152,7 @@ export default function Hero() {
           <div className="absolute inset-x-0 bottom-0 h-50 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="
-  absolute 
-  left-1/2 
-  bottom-45          /* 🔹 mobile: tablet upar */
-  sm:bottom-32       /* 🔹 small tablet: thoda aur upar */
-  md:bottom-10       /* ✅ md unchanged */
-  -translate-x-1/2 
-  z-10 
-  animate-[fadeInUp_1.2s_ease-out_1s_both]
-">
-
+        <div className="absolute left-1/2 bottom-45 sm:bottom-32 md:bottom-10 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
               src={tabImg}
@@ -174,17 +161,14 @@ export default function Hero() {
       w-[85vw]        /* 🔹 mobile: bigger tablet */
       sm:w-[520px]    /* 🔹 small tablets */
       md:w-[700px]    /* ✅ unchanged */
-      max-w-[780px]   /* ✅ unchanged */
-    "
-            />
+      max-w-[780px]   /* ✅ unchanged */" />
 
-            {/* Overlay inside tablet: Views label + 6 Million */}
+
             <div
               aria-hidden="true"
               className="absolute left-[28%] top-[28%] -translate-x-1/2 text-center pointer-events-none"
               style={{ transformOrigin: 'center' }}
             >
-
               <div className="text-lg md:text-2xl font-serif text-white font-semibold tabular-nums">
                 {formatMillion(views)}
               </div>

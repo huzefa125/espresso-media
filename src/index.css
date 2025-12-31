@@ -33,7 +33,7 @@
 
 @theme {
   --color-espresso: #B8734E;
-  --color-espresso-dark: #8F5536;
+  --color-espresso-dark: #422825;
   --font-family-tnr: 'TNR-Condensed', "Playfair Display", serif;
   /* Make serif variable use TNR first so italic styles pick the italic face automatically */
   --font-family-serif: 'TNR-Condensed', "Playfair Display", serif;
@@ -65,3 +65,4 @@ body {
 .font-serif {
   font-family: var(--font-family-tnr) !important;
 }
+

@@ -10,7 +10,6 @@ import commentsIcon from "../assets/icons/coments.png";
 export default function GetNoticed() {
   return (
     <section className="w-full bg-black text-white py-28 max-sm:py-12 overflow-hidden">
-
       {/* ================= HEADING ================= */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
