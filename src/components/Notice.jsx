@@ -9,7 +9,7 @@ import commentsIcon from "../assets/icons/coments.png";
 
 export default function GetNoticed() {
   return (
-    <section className="w-full bg-black text-white py-28 max-sm:py-12 overflow-hidden">
+    <section className="w-full bg-black text-white py-10 max-sm:py-12 overflow-hidden">
       {/* ================= HEADING ================= */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
@@ -31,11 +31,10 @@ export default function GetNoticed() {
         className="
           mx-auto max-w-[1440px]
           flex items-end justify-center
-          gap-10
-          max-xl:gap-10
-          max-lg:flex-col max-lg:items-center max-lg:gap-12
-          px-6 md:px-10 lg:px-0
-          max-sm:gap-10
+          gap-8 max-xl:gap-8
+          max-lg:flex-col max-lg:items-center max-lg:gap-8
+          px-3 md:px-5 lg:px-0
+          max-sm:gap-6
         "
         initial="hidden"
         whileInView="show"
@@ -48,6 +47,7 @@ export default function GetNoticed() {
         <AnimatedCard>
           <Card
             title="We'll help you get Visible"
+            className="w-10"
             image={leftImg}
             footerIcon={viewsIcon}
             footerText="3.8 Million Views"
@@ -137,7 +137,7 @@ function Card({ title, image, footerIcon, footerText, size }) {
       `}
     >
       {/* TITLE */}
-      <p className="text-[#E6D3C3] text-sm tracking-wide mb-4">
+      <p className="text-[#E6D3C3] text-sm tracking-wide mb-3 px-2 whitespace-nowrap truncate max-w-full">
         {title}
       </p>
 
@@ -161,7 +161,7 @@ function Card({ title, image, footerIcon, footerText, size }) {
 
       {/* FOOTER */}
       <div className="flex items-center gap-3 mt-6 text-[#E6D3C3]">
-        <img src={footerIcon} alt="" className="w-5 h-5" />
+        <img src={footerIcon} alt="" className="w-5 h-5 object-contain" />
         <span className="text-base max-sm:text-sm">{footerText}</span>
       </div>
     </div>

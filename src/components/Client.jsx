@@ -183,9 +183,9 @@ export default function Testimonials() {
         ) : (
           <motion.div
             className="flex gap-12 max-sm:gap-6" 
-            animate={{ x: ["0%", "-130%"] }}
+            animate={{ x: ["0%", "-200%"] }}
             transition={{
-              duration: 10,          
+              duration: 28  ,          
               ease: "linear",
               repeat: Infinity,
             }}

@@ -1,3 +1,8 @@
+import pr1 from "../assets/process/pr 1.png";
+import pr2 from "../assets/process/pr 2.png";
+import pr3 from "../assets/process/pr 3.png";
+import pr4 from "../assets/process/pr 4.png";
+
 export default function OurProcess() {
   return (
     <section className="w-full bg-black text-white px-24 py-3 max-lg:px-14 max-sm:px-5">
@@ -10,18 +15,22 @@ export default function OurProcess() {
       {/* ================= CARDS ================= */}
       <div className="grid grid-cols-4 gap-10 max-lg:grid-cols-2 items-center justify-center max-sm:grid-cols-1">
 
-        {[1, 2, 3, 4].map((num) => (
+        {[1, 2, 3, 4].map((num, idx) => (
           <div
             key={num}
-            className="relative h-[260px] rounded-2xl 
+            className="relative h-[350px] rounded-2xl overflow-hidden
                        bg-gradient-to-br from-[#1a120d] to-[#0b0806]
-                       border border-[#C08860]/15
-                       shadow-[0_0_40px_rgba(192,136,96,0.08)]"
+                      "
           >
-            {/* NUMBER */}
-            <span className="absolute left-6 top-0 font-serif text-[190px] text-[#C08860]/30">
-              {num}
-            </span>
+
+            {/* IMAGE */}
+            <div className="absolute inset-0 flex items-center justify-center p-2 z-10">
+              <img
+                src={[pr1, pr2, pr3, pr4][idx]}
+                alt={`Process ${num}`}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           </div>
         ))}
 

@@ -2,16 +2,16 @@
 
 import { useState, useEffect, useRef } from "react";
 import brandingIcon from "../assets/fa/branding.png";
-import contentIcon from "../assets/fa/ai.png";
+import contentIcon from "../assets/fa/content.png";
 import socialIcon from "../assets/fa/social.png";
 import performanceIcon from "../assets/fa/per.png";
-import automationIcon from "../assets/fa/leads.png";
+import automationIcon from "../assets/fa/ai.png";
 
 const services = [
   {
     title: "Branding & Designing",
     description:
-      "A mix of creativity and strategy to deliver results that tell a compelling brand story.\n\nClear, consistent brand identities that make your business look credible, premium, and trustworthy at every customer touchpoint.",
+      "A mix of creativity and strategy to deliver results that tell a compelling brand story. Clear, consistent brand identities  that make your business look credible, premium, and trustworthy at every customer touchpoint.",
     icon: brandingIcon,
   },
   {
@@ -127,14 +127,22 @@ export default function WhatWeOffer() {
               >
                 <div className="flex items-center gap-6 max-sm:gap-4">
                   <div className="w-16 h-16 max-sm:w-12 max-sm:h-12 group-hover:scale-110 transition-transform">
-                    <img src={item.icon} alt="" />
+                    <img
+                      src={item.icon}
+                      alt=""
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        // fallback to content icon if specific icon fails to load
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = contentIcon;
+                      }}
+                    />
                   </div>
 
                   <h3 className="font-serif text-[45px] max-lg:text-[36px] max-sm:text-[28px] text-[#C08860] group-hover:text-[#D4916C] transition-colors">
                     {item.title}
                   </h3>
                 </div>
-
                 <span
                   className="text-[#C08860] transition-transform"
                   style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -150,7 +158,7 @@ export default function WhatWeOffer() {
                   opacity: isOpen ? 1 : 0,
                 }}
               >
-                <p className="px-6 py-4 pl-20 max-sm:px-4 text-xl max-sm:pl-0 text-gray-300 font-normal font-serif">
+                <p className="px-3 py-2 pl-8 ml-13 mb-2 text-sm max-sm:px-4 max-sm:pl-0 text-gray-300 pr-100">
                   {item.description}
                 </p>
               </div>

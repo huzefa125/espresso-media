@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import tabImg from "../assets/mobile/tab.png";
-import waveImg from "../assets/mobile/graph.png";
+import waveImg from "../assets/mobile/graph2.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
   const formatMillion = (num) => {
     if (num >= 1_000_000) {
-      return (num / 1_000_000).toFixed(1).replace(".0", "") + " M";
+      return (num / 1_000_000).toFixed(1).replace(".0", "") + "M";
     }
     return num.toLocaleString();
   };
@@ -101,7 +101,7 @@ export default function Hero() {
               { name: "ABOUT US", href: "#beyond" },
               { name: "SERVICES", href: "#services" },
               { name: "TESTIMONIAL", href: "#testimonials" },
-              { name: "CASE STUDIES", href: "#case-studies" }
+              { name: "CASE STUDIES", href: "#case-studies" },
             ].map(item => (
               <a
                 key={item.name}
@@ -149,19 +149,19 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-[300px] pointer-events-none">
         <div className="absolute left-0 w-full z-20">
           <img src={waveImg} alt="wave" className="w-full object-cover w-full [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
-          <div className="absolute inset-x-0 bottom-0 h-50 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 bottom-45 sm:bottom-32 md:bottom-10 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute left-1/2 bottom-50 sm:bottom-32 md:bottom-10 -translate-x-1/2 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
               src={tabImg}
               alt="tablet"
               className="
-      w-[85vw]        /* 🔹 mobile: bigger tablet */
-      sm:w-[520px]    /* 🔹 small tablets */
-      md:w-[700px]    /* ✅ unchanged */
-      max-w-[780px]   /* ✅ unchanged */" />
+      w-[85vw] 
+      sm:w-[500px]   
+      md:w-[700px]   
+      max-w-[780px]"/>
 
 
             <div
@@ -169,8 +169,8 @@ export default function Hero() {
               className="absolute left-[28%] top-[28%] -translate-x-1/2 text-center pointer-events-none"
               style={{ transformOrigin: 'center' }}
             >
-              <div className="text-lg md:text-2xl font-serif text-white font-semibold tabular-nums">
-                {formatMillion(views)}
+              <div className="text-lg md:text-5xl text-gray-400 tabular-nums">
+                {formatMillion(views)}+
               </div>
 
             </div>
