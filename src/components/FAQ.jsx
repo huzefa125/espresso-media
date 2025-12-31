@@ -4,7 +4,7 @@ const faqs = [
 
   {
     q: "How is your approach different from other agencies?",
-    a: "Most agencies sell services. We build and manage growth systems. That means we don’t run isolated campaigns or chase trends. We design a structured ecosystem — from brand positioning to customer acquisition and conversion — with one clear goal: consistent, predictable results. Every move is intentional, measured, and tied to business outcomes.",
+    a: "We build and manage growth systems. That means we don’t run isolated campaigns or chase trends. We design a structured ecosystem — from brand positioning to customer acquisition and conversion — with one clear goal: consistent, predictable results. Every move is intentional, measured, and tied to business outcomes.",
   },
   {
     q: "What's the minimum retainer period?",
