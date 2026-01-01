@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import tabImg from "../assets/mobile/tab.png";
-import waveImg from "../assets/mobile/graph.png";
+import waveImg from "../assets/mobile/grahp1.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ export default function Hero() {
   };
 
   return (
-    <div id="home" className="min-h-screen md:min-h-[125vh]   w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-screen md:min-h-[125vh] fixed w-full bg-black relative overflow-hidden font-sans">
 
 
       <div
@@ -124,7 +124,7 @@ export default function Hero() {
       </header>
 
 
-      <section className="relative z-20 px-7 max-w-5xl md:ml-17 mt-10  max-sm:px-6">
+      <section className="relative z-20 px-7 max-w-5xl md:ml-17 mt-5  max-sm:px-6">
         {/* Where Strategy Is Brewed Into Measurable Results */}
 
         <h2 className="font-serif text-[50px] leading-tight text-espresso max-sm:text-[38px]">
@@ -148,25 +148,23 @@ export default function Hero() {
       </section>
 
       {/* ================= TABLET + WAVE ================= */}
-      <div className="absolute inset-x-0 bottom-0 h-[300px] pointer-events-none">
+      <div className="w-full">
+
+      <div className="absolute inset-x-0 bottom-0 w-full h-[380px] pointer-events-none">
         <div className="absolute left-0 w-full z-100">
           <img src={waveImg} alt="wave" className="w-full object-cover w-full [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
           <div className="absolute inset-x-0 bottom-50 h-100 "/>
         </div>
 
-        <div className="absolute left-1/2 bottom-50 md:bottom-20 -translate-x-2/4 z-10 transform scale-100 xl:scale-[1.33] origin-center transition-transform animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute left-1/2 bottom-75 md:bottom-0 -translate-x-1/2 z-10 transform origin-center animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
               src={tabImg}
               alt="tablet"
-              className="
-      w-[85vw] 
-      sm:w-[500px]   
-      md:w-[700px]   
-      max-w-[780px]"/>
+              className="w-[133%] max-w-none transform origin-center transition-transform"/>
             <div
               aria-hidden="true"
-              className="absolute left-[28%] top-[28%] -translate-x-1/2 text-center pointer-events-none"
+              className="absolute left-[38%] top-[28%] -translate-x-1/2 text-center pointer-events-none"
               style={{ transformOrigin: 'center' }}
             >
               <div className="text-lg md:text-5xl text-gray-400 tabular-nums">
@@ -177,6 +175,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+    </div>
 
       {/* ================= KEYFRAMES & NAV UNDERLINE ================= */}
       <style>{`
