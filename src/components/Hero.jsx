@@ -77,7 +77,6 @@ export default function Hero() {
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-espresso to-espressoDark opacity-0 group-hover:opacity-100 transition" />
           </a>
-
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-espresso"
@@ -125,7 +124,7 @@ export default function Hero() {
       </header>
 
 
-      <section className="relative z-20 px-7 max-w-5xl md:ml-17  max-sm:px-6">
+      <section className="relative z-20 px-7 max-w-5xl md:ml-17 mt-10  max-sm:px-6">
         {/* Where Strategy Is Brewed Into Measurable Results */}
 
         <h2 className="font-serif text-[50px] leading-tight text-espresso max-sm:text-[38px]">
@@ -138,7 +137,6 @@ export default function Hero() {
           <br className="max-sm:hidden" />
           and grow revenue for Experiential spaces and corporate brands.
         </p>
-
         <a
           href="#contact"
           className="group relative mt-7 px-5 sm:px-4 md:px-5 py-3 max-sm:py-2 max-sm:rounded-md rounded-full border border-espresso text-white tracking-widest max-sm:tracking-wide overflow-hidden inline-block text-center active:scale-95 transition-transform"
