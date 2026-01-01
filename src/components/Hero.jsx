@@ -125,7 +125,7 @@ export default function Hero() {
       </header>
 
 
-      <section className="relative z-20 px-7 mt-5 max-w-5xl md:ml-17  max-sm:px-6">
+      <section className="relative z-20 px-7 max-w-5xl md:ml-17  max-sm:px-6">
         {/* Where Strategy Is Brewed Into Measurable Results */}
 
         <h2 className="font-serif text-[50px] leading-tight text-espresso max-sm:text-[38px]">
