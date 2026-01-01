@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import tabImg from "../assets/mobile/tab.png";
-import waveImg from "../assets/mobile/graph3.png";
+import waveImg from "../assets/mobile/graph.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ export default function Hero() {
   };
 
   return (
-    <div id="home" className="min-h-screen md:min-h-[120vh] lg:min-h-[125vh] w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-screen md:min-h-[125vh]   w-full bg-black relative overflow-hidden font-sans">
 
 
       <div
@@ -132,14 +132,14 @@ export default function Hero() {
           <br /><span className="italic font-semibold"></span>
         </h2>
 
-        <p className="mt-10 max-w-3xl text-white text-2xl leading-relaxed max-sm:text-lg">
+        <p className="mt-6 sm:mt-1 max-w-3xl text-white text-2xl leading-relaxed max-sm:text-lg">
           A full-funnel growth system designed to move inventory
           <br className="max-sm:hidden" />
           and grow revenue for Experiential spaces and corporate brands.
         </p>
         <a
           href="#contact"
-          className="group relative mt-7 px-5 sm:px-4 md:px-5 py-3 max-sm:py-2 max-sm:rounded-md rounded-full border border-espresso text-white tracking-widest max-sm:tracking-wide overflow-hidden inline-block text-center active:scale-95 transition-transform"
+          className="group relative mt-3 px-5 sm:px-4 md:px-5 py-3 max-sm:py-2 max-sm:rounded-md rounded-full border border-espresso text-white tracking-widest max-sm:tracking-wide overflow-hidden inline-block text-center active:scale-95 transition-transform"
           aria-label="Get in touch"
         >
           <span className="relative z-10 text-base max-sm:text-sm sm:text-lg md:text-xl">GET IN TOUCH</span>
@@ -149,12 +149,12 @@ export default function Hero() {
 
       {/* ================= TABLET + WAVE ================= */}
       <div className="absolute inset-x-0 bottom-0 h-[300px] pointer-events-none">
-        <div className="absolute left-0 w-full z-20">
+        <div className="absolute left-0 w-full z-100">
           <img src={waveImg} alt="wave" className="w-full object-cover w-full [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
-          <div className="absolute inset-x-0 bottom-40 h-80 " />
+          <div className="absolute inset-x-0 bottom-50 h-100 "/>
         </div>
 
-        <div className="absolute left-1/2 bottom-50 md:bottom-10 -translate-x-2/4 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute left-1/2 bottom-50 md:bottom-20 -translate-x-2/4 z-10 transform scale-100 xl:scale-[1.33] origin-center transition-transform animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
               src={tabImg}
