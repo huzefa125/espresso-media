@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import tabImg from "../assets/mobile/tab.png";
-import waveImg from "../assets/mobile/graph2.png";
+import waveImg from "../assets/mobile/graph3.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ export default function Hero() {
   };
 
   return (
-    <div id="home" className="min-h-screen md:min-h-[125vh] lg:min-h-[125vh] w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-screen md:min-h-[120vh] lg:min-h-[125vh] w-full bg-black relative overflow-hidden font-sans">
 
 
       <div
@@ -153,7 +153,7 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-[300px] pointer-events-none">
         <div className="absolute left-0 w-full z-20">
           <img src={waveImg} alt="wave" className="w-full object-cover w-full [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
-          <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute inset-x-0 bottom-40 h-80 " />
         </div>
 
         <div className="absolute left-1/2 bottom-50 md:bottom-10 -translate-x-2/4 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
@@ -166,8 +166,6 @@ export default function Hero() {
       sm:w-[500px]   
       md:w-[700px]   
       max-w-[780px]"/>
-
-
             <div
               aria-hidden="true"
               className="absolute left-[28%] top-[28%] -translate-x-1/2 text-center pointer-events-none"

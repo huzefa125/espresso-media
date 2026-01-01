@@ -133,17 +133,7 @@ export default function CaseStudies() {
         </AnimatePresence>
 
         {/* ================= LEFT ARROW ================= */}
-        <button
-          onClick={prevCase}
-          className="absolute left-[-26px] top-1/2 -translate-y-1/2
-                     w-14 h-14 rounded-full bg-[#C08860]
-                     flex items-center justify-center
-                     text-black text-2xl hover:scale-105 transition
-                     max-sm:w-10 max-sm:h-10 max-sm:left-[-16px] max-sm:text-xl"
-          aria-label="Previous case study"
-        >
-          ←
-        </button>
+        
 
         {/* ================= RIGHT ARROW ================= */}
         <button
