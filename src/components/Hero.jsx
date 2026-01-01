@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import tabImg from "../assets/mobile/tab.png";
-import waveImg from "../assets/mobile/graph3.png";
+import waveImg from "../assets/mobile/grahp1.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
