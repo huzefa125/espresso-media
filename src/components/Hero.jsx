@@ -156,7 +156,7 @@ export default function Hero() {
           <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div className="absolute left-1/2 bottom-10 sm:bottom-32 md:bottom-10 -translate-x-2/4 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute left-1/2 bottom-50 md:bottom-10 -translate-x-2/4 z-10 animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
               src={tabImg}
