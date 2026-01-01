@@ -107,11 +107,10 @@ export default function CaseStudies() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.96 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="rounded-2xl shadow-xl max-w-full border border-[#C08860]/20"
+                    className="rounded-2xl shadow-xl max-w-full border"
                   />
                 </AnimatePresence>
               </button>
-
 
             </div>
 

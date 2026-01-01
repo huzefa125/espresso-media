@@ -144,99 +144,47 @@ export default function Testimonials() {
 
       {/* ================= MARQUEE ================= */}
       <div className="overflow-hidden relative">
-        {isMobile ? (
-          <div ref={mobileScrollRef} aria-live="polite" className="flex gap-6 overflow-x-auto snap-x snap-mandatory -mx-6 px-6">
-            {testimonials.map((item, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-[85%] rounded-[32px] bg-gradient-to-b from-[#3a2316] to-[#6a5a4a] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.6)] snap-center mx-3"
-              >
-                {/* PROFILE */}
-                <div className="flex items-center gap-4 mb-4">
-                  {item.image ? (
-                    <img src={item.image} alt={item.name} className="w-16 h-16 rounded-full object-cover bg-[#1b120f] border border-espresso/40 ring-1 ring-espresso/10" />
-                  ) : (
-                    <div className="w-16 h-16 rounded-full bg-[#1b120f] border border-espresso/40" />
-                  )}
-
-                  <div>
-                    <h4 className="text-lg font-semibold font-serif">{item.name}</h4>
-                    {(() => {
-                      const rawRole = item.role || "";
-                      const parts = rawRole.includes('—') ? rawRole.split('—').map(s => s.trim()) : [rawRole.trim()];
-                      const city = (item.city && item.city.trim()) || (parts[1] ? parts[1] : null);
-                      const roleLine = parts[0];
-                      return (
-                        <>
-                          {roleLine && <p className="text-sm text-gray-200">{roleLine}</p>}
-                          {city && <p className="text-sm text-gray-200">{city}</p>}
-                        </>
-                      );
-                    })()}
-                  </div>
+        <motion.div
+          className="flex gap-12 max-sm:gap-6"
+          animate={{ x: ["0%", "-200%"] }}
+          transition={{
+            duration: 28,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          {[...testimonials, ...testimonials].map((item, index) => (
+            <div
+              key={index}
+              className="min-w-[650px] max-lg:min-w-[400px] max-sm:min-w-[280px] rounded-[32px] bg-gradient-to-b from-[#3a2316] to-[#6a5a4a] p-8 max-sm:p-4 shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
+            >
+              {/* PROFILE */}
+              <div className="flex items-center gap-4 mb-4">
+                {item.image ? (
+                  <img src={item.image} alt={item.name} className="w-16 h-16 rounded-full object-cover bg-[#1b120f] border border-espresso/40 ring-1 ring-espresso/10" />
+                ) : (
+                  <div className="w-16 h-16 rounded-full bg-[#1b120f] border border-espresso/40" />
+                )}
+                <div>
+                  <h4 className="text-lg font-semibold font-serif">{item.name}</h4>
+                  {(() => {
+                    const rawRole = item.role || "";
+                    const parts = rawRole.includes('—') ? rawRole.split('—').map(s => s.trim()) : [rawRole.trim()];
+                    const city = (item.city && item.city.trim()) || (parts[1] ? parts[1] : null);
+                    const roleLine = parts[0];
+                    return (
+                      <>
+                        {roleLine && <p className="text-sm text-gray-200">{roleLine}</p>}
+                        {city && <p className="text-sm text-gray-200">{city}</p>}
+                      </>
+                    );
+                  })()}
                 </div>
-
-                <p className="text-[12px] leading-relaxed text-gray-100">{item.text}</p>
               </div>
-            ))}
-          </div>
-        ) : (
-          <motion.div
-            className="flex gap-12 max-sm:gap-6" 
-            animate={{ x: ["0%", "-200%"] }}
-            transition={{
-              duration: 28  ,          
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            {[...testimonials, ...testimonials].map((item, index) => (
-              <div
-                key={index}
-                className="
-                  min-w-[650px]
-                  max-lg:min-w-[400px]
-                  max-sm:min-w-[280px]
-                  rounded-[32px]
-                  bg-gradient-to-b from-[#3a2316] to-[#6a5a4a]
-                  px-15 py-5 pr-20 pl-10 ml-10 max-sm:p-6
-                  shadow-[0_20px_60px_rgba(0,0,0,0.6)]
-                "
-              >
-                {/* PROFILE */}
-                <div className="flex items-center gap-6 max-sm:gap-4 mb-4">
-                  {item.image ? (
-                    <img src={item.image} alt={item.name} className="w-20 h-20 max-sm:w-14 max-sm:h-14 rounded-full object-cover bg-[#1b120f] border border-espresso/40 ring-1 ring-espresso/10" />
-                  ) : (
-                    <div className="w-20 h-20 max-sm:w-14 max-sm:h-14 rounded-full bg-[#1b120f] border border-espresso/40" />
-                  )}
-
-                  <div>
-                    <h4 className="text-xl max-sm:text-lg font-semibold">
-                      {item.name}
-                    </h4>
-                    {(() => {
-                      const rawRole = item.role || "";
-                      const parts = rawRole.includes('—') ? rawRole.split('—').map(s => s.trim()) : [rawRole.trim()];
-                      const city = (item.city && item.city.trim()) || (parts[1] ? parts[1] : null);
-                      const roleLine = parts[0];
-                      return (
-                        <>
-                          {roleLine && <p className="text-xs max-sm:text-sm pt-1 text-gray-200">{roleLine}</p>}
-                          {city && <p className="text-xs max-sm:text-sm text-gray-200">{city}</p>}
-                        </>
-                      );
-                    })()}
-                  </div>
-                </div>
-                {/* TEXT */}
-                <p className="text-[14px] max-sm:text-[10px] leading-relaxed text-gray-100">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </motion.div>
-        )}
+              <p className="text-[12px] leading-relaxed text-gray-100">{item.text}</p>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

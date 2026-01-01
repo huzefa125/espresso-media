@@ -35,12 +35,12 @@ export default function FAQ() {
     <section className="w-full bg-black text-white px-20 py-32 max-lg:px-10 max-sm:px-5">
 
       {/* ================= HEADING ================= */}
-      <h2 className="text-center font-serif text-[48px] text-[#C08860] mb-24">
+      <h2 className="text-center max-sm:text-left font-serif text-[48px] text-[#C08860] mb-24">
         Frequently asked questions
       </h2>
 
       {/* ================= FAQ LIST ================= */}
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto max-sm:mx-0 max-sm:w-full">
 
         {faqs.map((item, i) => {
           const isOpen = openIndex === i;
@@ -51,7 +51,7 @@ export default function FAQ() {
               {/* QUESTION */}
               <button
                 onClick={() => toggle(i)}
-                className="w-full flex justify-between items-center py-10 text-[20px] "
+                className="w-full flex justify-between items-center py-10 text-[20px] text-left"
               >
                 {item.q}
                 <span className="text-[#C08860] text-2xl ml-4">{isOpen ? '−' : '+'}</span>
@@ -63,7 +63,7 @@ export default function FAQ() {
                   isOpen ? "max-h-40 pb-8" : "max-h-0"
                 }`}
               >
-                <p className="text-gray-300 text-[16px] leading-relaxed ">
+                <p className="text-gray-300 text-[16px] leading-relaxed max-sm:text-left">
                   {item.a}
                 </p>
               </div>
