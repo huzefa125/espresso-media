@@ -199,7 +199,7 @@ export default function Hero() {
               ref={tabRef}
               src={tabImg}
               alt="tablet"
-              className="w-[320px] sm:w-[400px] md:w-[400px] lg:w-[800px] xl:w-[800px] max-w-none"/>
+              className="w-[320px] sm:w-[400px] md:w-[300px] lg:w-[800px] xl:w-[800px] max-w-none"/>
             
             
 
