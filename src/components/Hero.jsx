@@ -98,7 +98,7 @@ export default function Hero() {
           <img 
             src={waveImg} 
             alt="wave" 
-            className="w-[150%] sm:w-[130%] md:w-[110%] lg:w-[110%] h-auto object-contain opacity-70 transform -translate-y-0 sm:-translate-y-[40px] md:-translate-y-[60px]"
+            className="w-[150%] sm:w-[130%] md:w-[100vw] lg:w-[95%] lg:mx-auto h-auto object-contain opacity-70 transform -translate-y-0 sm:-translate-y-[40px] md:-translate-y-[60px]"
             style={{ 
               maskImage: 'linear-gradient(to bottom, transparent 0%, black 40%, black 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 40%, black 100%)'
