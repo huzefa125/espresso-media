@@ -44,7 +44,7 @@ export default function Hero() {
       {/* ================= HEADER & HERO TEXT ================= */}
       <div className="flex flex-col">
         <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm">
-          <div className="flex items-center justify-between px-6 md:px-0 py-6">
+          <div className="flex items-center justify-between px-6 md:px-0 lg:px-20 py-6">
             <h1 className="text-xl font-serif text-[#B8734E] max-sm:text-2xl group">
               <span className="transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-espresso group-hover:to-espressoDark">
                 The Espresso Media
@@ -74,7 +74,7 @@ export default function Hero() {
           </div>
         </header>
 
-        <section className="relative z-20 px-6 md:px-0 mt-10 md:mt-16 flex-shrink-0">
+        <section className="relative z-20 px-6 md:px-0 lg:px-20 mt-10 md:mt-16 flex-shrink-0">
           <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-tight text-[#B8734E] max-w-5xl">
             Where Strategy Is <span className="italic font-semibold">Brewed <br className="hidden md:block" /></span>Into Measurable Results
           </h2>
@@ -98,7 +98,7 @@ export default function Hero() {
           <img 
             src={waveImg} 
             alt="wave" 
-            className="w-[150%] sm:w-[130%] md:w-[100vw] lg:w-[95%] lg:mx-auto h-auto object-contain opacity-70 transform -translate-y-0 sm:-translate-y-[40px] md:-translate-y-[60px]"
+            className="w-[150%] sm:w-[130%] md:w-[100vw] lg:w-[100%] lg:mx-auto h-auto object-contain opacity-70 transform -translate-y-0 sm:-translate-y-[40px] md:-translate-y-[60px]"
             style={{ 
               maskImage: 'linear-gradient(to bottom, transparent 0%, black 40%, black 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 40%, black 100%)'
