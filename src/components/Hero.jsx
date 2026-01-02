@@ -45,8 +45,10 @@ export default function Hero() {
       <div className="flex flex-col">
         <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm">
           <div className="flex items-center justify-between px-6 md:px-14 py-6">
-            <h1 className="text-xl font-serif text-[#B8734E] max-sm:text-2xl">
-              The Espresso Media
+            <h1 className="text-xl font-serif text-[#B8734E] max-sm:text-2xl group">
+              <span className="transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-espresso group-hover:to-espressoDark">
+                The Espresso Media
+              </span>
             </h1>
             <nav className="hidden md:flex ml-auto gap-8 lg:gap-11 px-6 py-2 rounded-full border border-[#B8734E] text-[#B8734E] text-sm tracking-widest">
               {["HOME", "ABOUT US", "SERVICES", "TESTIMONIAL", "CASE STUDIES"].map((name) => (
@@ -87,10 +89,10 @@ export default function Hero() {
       </div>
 
       {/* ================= TABLET + WAVE SECTION ================= */}
-      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[55vh] md:min-h-[55vh] justify-center mt-8 md:mt-0 pb-0">
+      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[55vh] md:min-h-[58vh] justify-center mt-8 md:mt-0 pb-0">
         
         {/* THE WAVE */}
-        <div className="absolute lg:-bottom-20 sm: left-0 w-full h-full z-10 pointer-events-none flex items-center justify-center">
+        <div className="absolute lg:-bottom-25 sm: left-0 w-full h-full z-10 pointer-events-none flex items-center justify-center">
           <img 
             src={waveImg} 
             alt="wave" 
@@ -112,20 +114,20 @@ export default function Hero() {
             />
             
             {/* OVERLAYS */}
-            <div className="absolute left-[18%] top-[24%]">
-              <div className="text-[10vw] sm:text-[7vw] md:text-5xl lg:text-6xl text-white font-bold tabular-nums tracking-tighter leading-none">
+            <div className="absolute left-[19%] top-[24%] max-sm:left-[22%] max-sm:top-[30%]">
+              <div className="text-[10vw] max-sm:text-[5vw] sm:mt-3 sm:text-[7vw] md:text-5xl lg:text-6xl text-white font-bold tabular-nums tracking-tighter leading-none">
                 {formatMillion(views)}+
               </div>
             </div>
 
-            <div className="absolute left-[19%] top-[45%]">
-              <div className="text-[2.5vw] sm:text-[1.8vw] md:text-xs lg:text-sm text-gray-400 font-medium">
+            <div className="absolute left-[19%] sm:mt-1 top-[45%] max-sm:left-[22%] max-sm:top-[42%]">
+              <div className="text-[2.5vw] max-sm:text-sm sm:text-[1vw] md:text-xs lg:text-sm text-gray-400 font-medium">
                 Real time data as on 15 Dec
               </div>
             </div>
 
-            <div className="absolute left-[19%] top-[55%] w-full">
-              <div className="flex gap-1.5 sm:gap-2 md:gap-3 lg:gap-5 items-center text-white text-[2.2vw] sm:text-[1.6vw] md:text-[10px] lg:text-xs">
+            <div className="absolute left-[19%] top-[55%] w-full max-sm:left-[22%] max-sm:top-[54%]">
+              <div className="flex gap-1.5 max-sm:gap-2 sm:gap-3 md:gap-3 lg:gap-5 items-center text-white text-[2.2vw] max-sm:text-sm sm:text-[1.6vw] md:text-[10px] lg:text-xs">
                 <span>1H</span>
                 <span className="px-1.5 md:px-2 py-0.5 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
                 <span>1W</span>
