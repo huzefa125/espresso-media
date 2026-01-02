@@ -73,10 +73,10 @@ export default function Hero() {
   return (
     <div id="home" className="min-h-screen md:min-h-[120vh] w-full bg-black relative overflow-hidden font-sans">
 
-
+{/* 
       <div
         className="absolute inset-0 bg-[linear-gradient(135deg,theme(colors.espresso)_0%,transparent_10%),linear-gradient(225deg,theme(colors.espresso)_0%,transparent_7%)]"
-      />
+      /> */}
 
 
       <header className="sticky top-0 z-50 ">
@@ -199,7 +199,7 @@ export default function Hero() {
               ref={tabRef}
               src={tabImg}
               alt="tablet"
-              className="w-[320px] sm:w-[400px] md:w-[500px] lg:w-[650px] xl:w-[750px] max-w-none"/>
+              className="w-[320px] sm:w-[400px] md:w-[450px] lg:w-[500px] xl:w-[700px] max-w-none"/>
             
             
 
@@ -226,7 +226,7 @@ export default function Hero() {
             {/* Time period buttons */}
             <div
               aria-hidden="true"
-              className="absolute left-[15%] mt-2 sm:left-[17%] md:left-[18%] top-[44%] md:top-[45%] pointer-events-none"
+              className="absolute left-[15%] mt-3 sm:left-[17%] md:left-[18%] top-[44%] md:top-[45%] pointer-events-none"
             >
               <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 items-center text-white text-[8px] sm:text-[10px] md:text-xs lg:text-base">
                 <span>1H</span>
