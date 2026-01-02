@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import tabImg from "../assets/mobile/tab.png";
+import { useState, useEffect, useRef } from "react";
+import tabImg from "../assets/mobile/tab2.png";
 import waveImg from "../assets/mobile/grahp1.png";
 
 export default function Hero() {
@@ -33,8 +33,45 @@ export default function Hero() {
     return num.toLocaleString();
   };
 
+  // Refs and scale state for tablet overlays — text will scale as the tablet width changes
+  const tabRef = useRef(null);
+  const overlayRef = useRef(null);
+  const baseWidthRef = useRef(null);
+  const [tabScale, setTabScale] = useState(1);
+
+  useEffect(() => {
+    if (!tabRef.current) return;
+    // capture baseline width once on mount
+    baseWidthRef.current = tabRef.current.offsetWidth || 1;
+
+    const ro = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        const w = entry.contentRect.width;
+        if (baseWidthRef.current) {
+          const scale = w / baseWidthRef.current || 1;
+          setTabScale(Number(scale.toFixed(3)));
+        }
+      }
+    });
+
+    ro.observe(tabRef.current);
+
+    const onResize = () => {
+      if (tabRef.current && baseWidthRef.current) {
+        const w = tabRef.current.offsetWidth;
+        setTabScale(Number((w / baseWidthRef.current).toFixed(3)));
+      }
+    };
+
+    window.addEventListener('resize', onResize);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+
   return (
-    <div id="home" className="min-h-screen md:min-h-[125vh] fixed w-full bg-black relative overflow-hidden font-sans">
+    <div id="home" className="min-h-screen md:min-h-[120vh] w-full bg-black relative overflow-hidden font-sans">
 
 
       <div
@@ -124,10 +161,10 @@ export default function Hero() {
       </header>
 
 
-      <section className="relative z-20 px-7 max-w-5xl md:ml-17 mt-5  max-sm:px-6">
+      <section className="relative z-20 max-w-5xl md:ml-15 mt-5  max-sm:px-0">
         {/* Where Strategy Is Brewed Into Measurable Results */}
 
-        <h2 className="font-serif text-[50px] leading-tight text-espresso max-sm:text-[38px]">
+        <h2 className="font-serif text-[70px] leading-tight text-espresso max-sm:text-[38px]">
           Where Strategy Is <span className="italic font-semibold">Brewed <br /></span>Into Measurable Results
           <br /><span className="italic font-semibold"></span>
         </h2>
@@ -150,27 +187,56 @@ export default function Hero() {
       {/* ================= TABLET + WAVE ================= */}
       <div className="w-full">
 
-      <div className="absolute inset-x-0 bottom-0 w-full h-[380px] pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 w-full h-[400px] pointer-events-none">
         <div className="absolute left-0 w-full z-100">
-          <img src={waveImg} alt="wave" className="w-full object-cover w-full [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
+          <img src={waveImg} alt="wave" className="w-full object-cover [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
           <div className="absolute inset-x-0 bottom-50 h-100 "/>
         </div>
 
-        <div className="absolute left-1/2 bottom-75 md:bottom-0 -translate-x-1/2 z-10 transform origin-center animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute inset-x-0 bottom-75 md:bottom-20 z-20 flex justify-center transform origin-center animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
+              ref={tabRef}
               src={tabImg}
               alt="tablet"
-              className="w-[133%] max-w-none transform origin-center transition-transform"/>
+              className="w-[320px] sm:w-[400px] md:w-[500px] lg:w-[650px] xl:w-[750px] max-w-none"/>
+            
+            
+
+            {/* Views Counter */}
             <div
               aria-hidden="true"
-              className="absolute left-[38%] top-[28%] -translate-x-1/2 text-center pointer-events-none"
-              style={{ transformOrigin: 'center' }}
+              className="absolute left-[15%] sm:left-[17%] md:left-[18%] top-[24%] md:top-[25%] pointer-events-none"
             >
-              <div className="text-lg md:text-5xl text-gray-400 tabular-nums">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl text-white font-bold tabular-nums">
                 {formatMillion(views)}+
               </div>
+            </div>
 
+            {/* Real time data text */}
+            <div
+              aria-hidden="true"
+              className="absolute left-[15%] mt-2 sm:left-[17%] md:left-[18%] top-[38%] md:top-[39%] pointer-events-none"
+            >
+              <div className="text-[8px] mt-2 sm:text-[9px] md:text-xs lg:text-sm text-gray-400">
+                Real time data as on 15 Dec
+              </div>
+            </div>
+
+            {/* Time period buttons */}
+            <div
+              aria-hidden="true"
+              className="absolute left-[15%] mt-2 sm:left-[17%] md:left-[18%] top-[44%] md:top-[45%] pointer-events-none"
+            >
+              <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 items-center text-white text-[8px] sm:text-[10px] md:text-xs lg:text-base">
+                <span>1H</span>
+                <span className="px-2 md:px-3 py-0.5 md:py-1 rounded-md bg-gray-700/80">1D</span>
+                <span>1W</span>
+                <span>1Y</span>
+                <span>2Y</span>
+                <span>5Y</span>
+                <span>ALL</span>
+              </div>
             </div>
           </div>
         </div>
