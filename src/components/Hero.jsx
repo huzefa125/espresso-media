@@ -33,12 +33,7 @@ export default function Hero() {
     return num.toLocaleString();
   };
 
-  // Responsive layout uses CSS breakpoints (sm/md/lg) for positioning
-
-
   return (
-    // min-h-screen ensures it takes full height. flex-col and justify-between 
-    // helps separate the top content from the bottom visual on desktop.
     <div id="home" className="min-h-screen w-full bg-black relative overflow-hidden font-sans flex flex-col justify-between">
 
       {/* ================= HEADER & HERO TEXT ================= */}
@@ -75,7 +70,7 @@ export default function Hero() {
         </header>
 
         <section className="relative z-20 px-6 md:px-0 lg:px-20 mt-10 md:mt-16 flex-shrink-0">
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl leading-tight text-[#B8734E] max-w-5xl">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-7xl leading-tight text-[#B8734E] max-w-5xl">
             Where Strategy Is <span className="italic font-semibold">Brewed <br className="hidden md:block" /></span>Into Measurable Results
           </h2>
 
@@ -91,14 +86,14 @@ export default function Hero() {
       </div>
 
       {/* ================= TABLET + WAVE SECTION ================= */}
-      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[55vh] md:min-h-[58vh] justify-center mt-8 md:mt-0 pb-0">
+      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[40vh] md:min-h-[58vh] justify-center  md:mt-0 pb-0">
         
         {/* THE WAVE */}
-        <div className="absolute lg:-bottom-40 sm: left-0 w-full h-full z-50 pointer-events-none flex items-center justify-center">
+        <div className="absolute lg:-bottom-40 sm:-bottom-10 left-0 w-full h-full z-10 lg:z-50 pointer-events-none flex items-center justify-center">
           <img 
             src={waveImg} 
             alt="wave" 
-            className="w-[150%] sm:w-[130%] md:w-[100vw] lg:w-[100%] lg:mx-auto h-auto object-contain opacity-70 transform -translate-y-0 sm:-translate-y-[40px] md:-translate-y-[60px]"
+            className="w-[140%] sm:w-[140%] md:w-[100vw] lg:w-[100%] lg:mx-auto h-auto object-contain opacity-70 transform translate-y-[20px] sm:-translate-y-[140px] md:-translate-y-[60px]"
             style={{ 
               maskImage: 'linear-gradient(to bottom, transparent 0%, black 40%, black 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 40%, black 100%)'
@@ -107,7 +102,8 @@ export default function Hero() {
         </div>
 
         {/* THE TABLET */}
-        <div className="relative z-20 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[550px] lg:max-w-[750px] px-4 animate-[fadeInUp_1.2s_ease-out_1s_both] transform transition-transform -translate-y-0 sm:-translate-y-[120px] md:-translate-y-[80px] lg:-translate-y-0">
+        {/* Fix: Adjusted max-sm:-translate-y to bring the tablet into view on small screens */}
+        <div className="relative z-20 max-sm:z-20 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[550px] lg:max-w-[750px] px-4 animate-[fadeInUp_1.2s_ease-out_1s_both] transform transition-transform translate-y-[40px] max-sm:translate-y-[10px] sm:-translate-y-[120px] md:-translate-y-[80px] lg:-translate-y-0">
           <div className="relative">
             <img
               src={tabImg}
@@ -116,25 +112,26 @@ export default function Hero() {
             />
             
             {/* OVERLAYS */}
-            <div className="absolute left-[19%] top-[24%] max-sm:left-[22%] max-sm:top-[30%]">
-              <div className="text-[10vw] max-sm:text-[5vw] sm:mt-3 sm:text-[7vw] md:text-5xl lg:text-6xl text-white font-bold tabular-nums tracking-tighter leading-none">
+            {/* Fix: Specifically targeting text size and alignment for small screens */}
+            <div className="absolute left-[20%] top-[24%] max-sm:left-[20%] max-sm:top-[28%]">
+              <div className="text-[10vw] max-sm:text-[8vw] sm:mt-4 sm:text-[7vw] md:text-5xl lg:text-6xl text-white font-bold tabular-nums tracking-tighter leading-none">
                 {formatMillion(views)}+
               </div>
             </div>
 
-            <div className="absolute left-[19%] sm:mt-1 top-[45%] max-sm:left-[22%] max-sm:top-[42%]">
-              <div className="text-[2.5vw] max-sm:text-sm sm:text-[1vw] md:text-xs lg:text-sm text-gray-400 font-medium">
+            <div className="absolute left-[19%] sm:mt-1 top-[45%] max-sm:left-[21%] max-sm:top-[46%]">
+              <div className="text-[2.5vw] max-sm:text-[2.2vw] sm:text-[1vw] md:text-xs lg:text-sm text-gray-400 font-medium">
                 Real time data as on 15 Dec
               </div>
             </div>
 
-            <div className="absolute left-[19%] top-[55%] w-full max-sm:left-[22%] max-sm:top-[54%]">
-              <div className="flex gap-1.5 max-sm:gap-2 sm:gap-3 md:gap-3 lg:gap-3 items-center text-white text-[2.2vw] max-sm:text-sm sm:text-[1.6vw] md:text-[10px] lg:text-xs">
-                <span>1H</span>
-                <span className="px-1.5 md:px-2 py-0.5 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
-                <span>1W</span>
-                <span>1Y</span>
-                <span>ALL</span>
+            <div className="absolute left-[19%] top-[55%] w-full max-sm:left-[20%] max-sm:top-[56%] max-sm:w-[65%]">
+              <div className="flex gap-1.5 max-sm:gap-1.5 sm:gap-3 md:gap-3 lg:gap-3 items-center text-white text-[20px] max-sm:text-[8px] sm:text-[1.6vw] md:text-[10px] lg:text-xs">
+                <span className="max-sm:px-0.5">1H</span>
+                <span className="px-1 md:px-2 py-0.5 max-sm:px-1 max-sm:py-0 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
+                <span className="max-sm:px-0.5">1W</span>
+                <span className="max-sm:px-0.5">1Y</span>
+                <span className="max-sm:px-0.5">ALL</span>
               </div>
             </div>
           </div>
