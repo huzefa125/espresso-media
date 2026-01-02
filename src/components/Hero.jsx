@@ -114,7 +114,7 @@ export default function Hero() {
             {/* OVERLAYS */}
             {/* Fix: Specifically targeting text size and alignment for small screens */}
             <div className="absolute left-[20%] top-[24%] max-sm:left-[20%] max-sm:top-[28%]">
-              <div className="text-[10vw] max-sm:text-[8vw] sm:mt-4 sm:text-[7vw] md:text-5xl lg:text-6xl text-white font-bold tabular-nums tracking-tighter leading-none">
+              <div className="text-[10vw] max-sm:text-[8vw] sm:mt-2 sm:text-[7vw] md:text-4xl lg:text-xl text-white font-bold tabular-nums tracking-tighter leading-none">
                 {formatMillion(views)}+
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function Hero() {
             </div>
 
             <div className="absolute left-[19%] top-[55%] w-full max-sm:left-[20%] max-sm:top-[56%] max-sm:w-[65%]">
-              <div className="flex gap-1.5 max-sm:gap-1.5 sm:gap-3 md:gap-3 lg:gap-3 items-center text-white text-[20px] max-sm:text-[8px] sm:text-[1.6vw] md:text-[10px] lg:text-xs">
+              <div className="flex gap-1.5 max-sm:gap-1.5 sm:gap-3 md:gap-3 lg:gap-3 items-center text-white text-[20px] max-sm:text-[8px] sm:text-[1.6vw] md:text-[8px] lg:text-xs">
                 <span className="max-sm:px-0.5">1H</span>
                 <span className="px-1 md:px-2 py-0.5 max-sm:px-1 max-sm:py-0 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
                 <span className="max-sm:px-0.5">1W</span>
