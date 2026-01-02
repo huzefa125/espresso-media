@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-black md:px-20'>
+      <div className='bg-black md:px-0 lg:px-20'>
         <Hero />
         <section id="beyond">
           <Beyond />
