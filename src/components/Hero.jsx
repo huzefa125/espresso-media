@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import tabImg from "../assets/mobile/tab2.png";
-import waveImg from "../assets/mobile/graph4.avif";
+import waveImg from "../assets/mobile/graph3.png";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -94,7 +94,7 @@ export default function Hero() {
       <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[55vh] md:min-h-[58vh] justify-center mt-8 md:mt-0 pb-0">
         
         {/* THE WAVE */}
-        <div className="absolute lg:-bottom-25 sm: left-0 w-full h-full z-10 pointer-events-none flex items-center justify-center">
+        <div className="absolute lg:-bottom-40 sm: left-0 w-full h-full z-50 pointer-events-none flex items-center justify-center">
           <img 
             src={waveImg} 
             alt="wave" 
@@ -129,7 +129,7 @@ export default function Hero() {
             </div>
 
             <div className="absolute left-[19%] top-[55%] w-full max-sm:left-[22%] max-sm:top-[54%]">
-              <div className="flex gap-1.5 max-sm:gap-2 sm:gap-3 md:gap-3 lg:gap-5 items-center text-white text-[2.2vw] max-sm:text-sm sm:text-[1.6vw] md:text-[10px] lg:text-xs">
+              <div className="flex gap-1.5 max-sm:gap-2 sm:gap-3 md:gap-3 lg:gap-3 items-center text-white text-[2.2vw] max-sm:text-sm sm:text-[1.6vw] md:text-[10px] lg:text-xs">
                 <span>1H</span>
                 <span className="px-1.5 md:px-2 py-0.5 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
                 <span>1W</span>
