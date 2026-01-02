@@ -59,8 +59,9 @@ export default function Hero() {
             </nav>
 
             <a href="#contact" className="hidden md:flex group relative px-4 py-3 rounded-full border border-[#B8734E] text-white text-sm tracking-wide overflow-hidden ml-6">
-              <span className="relative z-10 flex items-center gap-2">CONTACT US ↗</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#B8734E] to-[#8a563a] opacity-0 group-hover:opacity-100 transition" />
+              <span className="relative z-30 flex items-center gap-2">CONTACT US ↗</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#B8734E] to-[#8a563a] opacity-0 group-hover:opacity-100 transition z-0" />
+              <span className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-black/50 to-transparent pointer-events-none z-20 rounded-r-full" />
             </a>
             
             <button onClick={() => setOpen(!open)} className="md:hidden text-[#B8734E]">
@@ -82,8 +83,9 @@ export default function Hero() {
             A full-funnel growth system designed to move inventory and grow revenue for Experiential spaces and corporate brands.
           </p>
           <a href="#contact" className="group relative mt-8 px-6 py-3 rounded-full border border-[#B8734E] text-white tracking-widest overflow-hidden inline-block text-center active:scale-95 transition-transform">
-            <span className="relative z-10 text-sm md:text-base uppercase">Get in touch</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#B8734E] to-[#8a563a] opacity-0 group-hover:opacity-100 transition" />
+            <span className="relative z-30 text-sm md:text-base uppercase">Get in touch</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#B8734E] to-[#8a563a] opacity-0 group-hover:opacity-100 transition z-0" />
+            <span className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-black/50 to-transparent pointer-events-none z-20 rounded-r-full" />
           </a>
         </section>
       </div>
