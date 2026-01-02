@@ -94,7 +94,7 @@ export default function Hero() {
 
       {/* ================= TABLET + WAVE SECTION ================= */}
       {/* Changed: Used mt-auto and a relative container to ensure it stays at bottom but scales */}
-      <div className="relative mt-auto w-full pt-20 pointer-events-none">
+      <div className="relative mt-auto w-full pt-0 pointer-events-none">
         
         {/* Wave Background: Now set to absolute fill of this bottom container */}
         <div className="absolute inset-x-0 bottom-0 w-full z-10">
@@ -118,8 +118,8 @@ export default function Hero() {
             />
             
             {/* OVERLAYS: Using font-size based on Container Width (cqw) or Viewport Width (vw) */}
-            <div className="absolute left-[13%] top-[24%]">
-              <div className="text-[7vw] sm:text-[6vw] md:text-5xl lg:text-7xl text-white font-bold tabular-nums tracking-tighter leading-none">
+            <div className="absolute left-[20%] top-[24%]">
+              <div className="text-[4vw] sm:text-[6vw] md:text-5xl lg:text-7xl text-white font-bold tabular-nums tracking-tighter leading-none">
                 {formatMillion(views)}+
               </div>
             </div>
