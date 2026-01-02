@@ -44,7 +44,7 @@ export default function Hero() {
       {/* ================= HEADER & HERO TEXT ================= */}
       <div className="flex flex-col">
         <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm">
-          <div className="flex items-center justify-between px-6 md:px-14 py-6">
+          <div className="flex items-center justify-between px-6 md:px- py-6">
             <h1 className="text-xl font-serif text-[#B8734E] max-sm:text-2xl group">
               <span className="transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-espresso group-hover:to-espressoDark">
                 The Espresso Media
