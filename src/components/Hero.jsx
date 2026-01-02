@@ -187,19 +187,19 @@ export default function Hero() {
       {/* ================= TABLET + WAVE ================= */}
       <div className="w-full">
 
-      <div className="absolute inset-x-0 bottom-0 w-full h-[400px] pointer-events-none">
+      <div className="absolute inset-x-0 bottom-0 w-full lg:h-[420px] md:h-[380px] pointer-events-none">
         <div className="absolute left-0 w-full z-100">
           <img src={waveImg} alt="wave" className="w-full object-cover [mask-image:linear-gradient(to_bottom,black_0%,transparent)]" />
           <div className="absolute inset-x-0 bottom-50 h-100 "/>
         </div>
 
-        <div className="absolute inset-x-0 bottom-75 md:bottom-20 z-20 flex justify-center transform origin-center animate-[fadeInUp_1.2s_ease-out_1s_both]">
+        <div className="absolute inset-x-0 bottom-75 md:bottom-0 lg:bottom-20 z-20 flex justify-center transform origin-center animate-[fadeInUp_1.2s_ease-out_1s_both]">
           <div className="relative">
             <img
               ref={tabRef}
               src={tabImg}
               alt="tablet"
-              className="w-[320px] sm:w-[400px] md:w-[450px] lg:w-[500px] xl:w-[700px] max-w-none"/>
+              className="w-[320px] sm:w-[400px] md:w-[400px] lg:w-[800px] xl:w-[800px] max-w-none"/>
             
             
 
@@ -216,7 +216,7 @@ export default function Hero() {
             {/* Real time data text */}
             <div
               aria-hidden="true"
-              className="absolute left-[15%] mt-2 sm:left-[17%] md:left-[18%] top-[38%] md:top-[39%] pointer-events-none"
+              className="absolute left-[19%] mt-2 sm:left-[17%] md:left-[18%] top-[38%] md:top-[39%] pointer-events-none"
             >
               <div className="text-[8px] mt-2 sm:text-[9px] md:text-xs lg:text-sm text-gray-400">
                 Real time data as on 15 Dec
