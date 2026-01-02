@@ -34,7 +34,6 @@ export default function Hero() {
   };
 
   return (
-    // Changed: Removed fixed high vh, used flex-col to allow content to push the page height
     <div id="home" className="min-h-screen w-full bg-black relative overflow-hidden font-sans flex flex-col">
 
       {/* ================= HEADER ================= */}
@@ -64,17 +63,6 @@ export default function Hero() {
             </div>
           </button>
         </div>
-
-        {/* MOBILE MENU */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-          <div className="px-6 py-6 space-y-4 border-t border-[#B8734E]/20 bg-black">
-            {["HOME", "ABOUT US", "SERVICES", "TESTIMONIAL", "CASE STUDIES"].map(name => (
-              <a key={name} href="#" className="block text-[#B8734E] text-lg py-2 border-b border-[#B8734E]/20" onClick={() => setOpen(false)}>
-                {name}
-              </a>
-            ))}
-          </div>
-        </div>
       </header>
 
       {/* ================= HERO CONTENT ================= */}
@@ -93,44 +81,44 @@ export default function Hero() {
       </section>
 
       {/* ================= TABLET + WAVE SECTION ================= */}
-      {/* Changed: Used mt-auto and a relative container to ensure it stays at bottom but scales */}
-      <div className="relative mt-auto w-full pt-0 pointer-events-none">
+      <div className="relative mt-auto w-full flex flex-col items-center min-h-[40vh] md:min-h-[50vh] justify-end">
         
-        {/* Wave Background: Now set to absolute fill of this bottom container */}
-        <div className="absolute inset-x-0 bottom-0 w-full z-10">
+        {/* THE WAVE: Fixed to bottom but starts visual line from the middle */}
+        <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none h-full overflow-hidden">
           <img 
             src={waveImg} 
             alt="wave" 
-            className="w-full h-auto object-cover opacity-60 min-h-[200px]" 
-            style={{ maskImage: 'linear-gradient(to top, black 20%, transparent 100%)' }} 
+            className="w-full h-full object-cover md:object-fill opacity-60 object-top" 
+            style={{ 
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 50%, black 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 50%, black 100%)'
+            }} 
           />
         </div>
 
-        {/* Tablet Positioning: Changed from absolute bottom to relative flow for better spacing */}
-        <div className="relative z-20 flex justify-center px-4 -mb-4 sm:-mb-8 md:-mb-12 animate-[fadeInUp_1.2s_ease-out_1s_both]">
-          
-          {/* THE FIX: Max-width is responsive (removes the "lg:h-[400px]" fixed heights) */}
-          <div className="relative w-full max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px]">
+        {/* THE TABLET: Positioned on top of the wave */}
+        <div className="relative z-20 w-full max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[800px] px-4 pb-0 animate-[fadeInUp_1.2s_ease-out_1s_both]">
+          <div className="relative">
             <img
               src={tabImg}
               alt="tablet"
               className="w-full h-auto block drop-shadow-2xl"
             />
             
-            {/* OVERLAYS: Using font-size based on Container Width (cqw) or Viewport Width (vw) */}
-            <div className="absolute left-[20%] top-[24%]">
-              <div className="text-[4vw] sm:text-[6vw] md:text-5xl lg:text-7xl text-white font-bold tabular-nums tracking-tighter leading-none">
+            {/* OVERLAYS */}
+            <div className="absolute left-[19%] top-[24%]">
+              <div className="text-[7vw] sm:text-[6vw] md:text-5xl lg:text-7xl text-white font-bold tabular-nums tracking-tighter leading-none">
                 {formatMillion(views)}+
               </div>
             </div>
 
-            <div className="absolute left-[13.5%] top-[45%]">
+            <div className="absolute left-[20%] top-[45%]">
               <div className="text-[2vw] sm:text-[1.5vw] md:text-xs lg:text-sm text-gray-400 font-medium">
                 Real time data as on 15 Dec
               </div>
             </div>
 
-            <div className="absolute left-[13%] top-[55%] w-full">
+            <div className="absolute left-[20%] top-[55%] w-full">
               <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center text-white text-[1.8vw] sm:text-[1.5vw] md:text-[10px] lg:text-sm">
                 <span>1H</span>
                 <span className="px-1.5 md:px-2 py-0.5 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
