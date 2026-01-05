@@ -86,10 +86,10 @@ export default function Hero() {
       </div>
 
       {/* ================= TABLET + WAVE SECTION ================= */}
-      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[40vh] md:min-h-[58vh] justify-center mt-8 md:mt-0 pb-0">
+      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[40vh] md:min-h-[58vh] justify-center mt-8 md:mt-0 pb-0 max-sm:pb-20">
         
         {/* THE WAVE */}
-        <div className="absolute lg:-bottom-40 sm:-bottom-10 left-0 w-full h-full z-10 lg:z-50 pointer-events-none flex items-center justify-center">
+        <div className="absolute lg:-bottom-40 sm:-bottom-10 left-0 w-full h-full z-50 pointer-events-none flex items-center justify-center">
           <img 
             src={waveImg} 
             alt="wave" 
@@ -103,7 +103,7 @@ export default function Hero() {
 
         {/* THE TABLET */}
         {/* Fix: Adjusted max-sm:-translate-y to bring the tablet into view on small screens */}
-        <div className="relative z-20 max-sm:z-30 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[550px] lg:max-w-[750px] px-4 animate-[fadeInUp_1.2s_ease-out_1s_both] transform transition-transform translate-y-[40px] max-sm:translate-y-[10px] sm:-translate-y-[120px] md:-translate-y-[80px] lg:-translate-y-0">
+        <div className="relative z-10 max-sm:z-0 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[550px] lg:max-w-[750px] px-4 max-sm:mb-12 animate-[fadeInUp_1.2s_ease-out_1s_both] transform transition-transform translate-y-[40px] max-sm:translate-y-[10px] sm:-translate-y-[120px] md:-translate-y-[80px] lg:-translate-y-0">
           <div className="relative">
             <img
               src={tabImg}
@@ -114,18 +114,18 @@ export default function Hero() {
             {/* OVERLAYS */}
             {/* Fix: Specifically targeting text size and alignment for small screens */}
             <div className="absolute left-[20%] top-[24%] max-sm:left-[20%] max-sm:top-[28%]">
-              <div className="text-[10vw] max-sm:text-[8vw] sm:mt-4 sm:text-[7vw] md:text-5xl lg:text-6xl text-white font-bold tabular-nums tracking-tighter leading-none">
+              <div className="text-[10vw] max-sm:text-[5vw] sm:mt-4 sm:text-[7vw] md:text-5xl lg:text-6xl text-white font-bold tabular-nums tracking-tighter leading-none">
                 {formatMillion(views)}+
               </div>
             </div>
 
-            <div className="absolute left-[19%] sm:mt-1 top-[45%] max-sm:left-[21%] max-sm:top-[46%]">
+            <div className="absolute left-[19%] sm:mt-0 top-[45%] max-sm:left-[21%] max-sm:top-[42%]">
               <div className="text-[2.5vw] max-sm:text-[2.2vw] sm:text-[1vw] md:text-xs lg:text-sm text-gray-400 font-medium">
                 Real time data as on 15 Dec
               </div>
             </div>
 
-            <div className="absolute left-[20%] top-[55%] w-full max-sm:left-[20%] max-sm:top-[56%] max-sm:w-[65%]">
+            <div className="absolute left-[20%] top-[55%] w-full max-sm:left-[20%] max-sm:top-[50%] max-sm:w-[45%]">
               <div className="flex gap-1.5 max-sm:gap-1.5 sm:gap-3 md:gap-3 lg:gap-3 items-center text-white text-[17px] max-sm:text-[8px] sm:text-[1.6vw] md:text-[10px] lg:text-xs">
                 <span className="max-sm:px-0.5">1H</span>
                 <span className="px-1 md:px-2 py-0.5 max-sm:px-1 max-sm:py-0 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
