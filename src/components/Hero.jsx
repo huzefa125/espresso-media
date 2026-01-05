@@ -70,11 +70,11 @@ export default function Hero() {
         </header>
 
         <section className="relative z-20 px-6 md:px-0 lg:px-20 mt-10 md:mt-16 flex-shrink-0">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-7xl leading-tight text-[#B8734E] max-w-5xl">
-            Where Strategy Is <span className="italic font-semibold">Brewed <br className="hidden md:block" /></span>Into Measurable Results
+          <h2 className="font-serif text-5xl sm:text-4xl md:text-7xl leading-tight text-[#B8734E] max-w-5xl">
+            Where Strategy Is <span className="italic font-semibold">Brewed <br className="block md:block" /></span>Into Measurable Results
           </h2>
 
-          <p className="mt-6 max-w-3xl text-white text-lg md:text-2xl leading-relaxed opacity-90">
+          <p className="mt-6 max-w-3xl text-white text-xl max-sm:text-2xl md:text-2xl leading-relaxed opacity-90">
             A full-funnel growth system designed to move inventory and grow revenue for Experiential spaces and corporate brands.
           </p>
           <a href="#contact" className="group relative mt-8 px-6 py-3 rounded-full border border-[#B8734E] text-white tracking-widest overflow-hidden inline-block text-center active:scale-95 transition-transform">
