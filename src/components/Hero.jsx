@@ -86,7 +86,7 @@ export default function Hero() {
       </div>
 
       {/* ================= TABLET + WAVE SECTION ================= */}
-      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[40vh] md:min-h-[58vh] justify-center mt-8 md:mt-0 pb-0 max-sm:pb-20">
+      <div className="relative w-full flex flex-col items-center min-h-[40vh] sm:min-h-[100vh] md:min-h-[58vh] justify-center mt-8 md:mt-0 pb-0 max-sm:pb-0">
         
         {/* THE WAVE */}
         <div className="absolute lg:-bottom-40 sm:-bottom-10 left-0 w-full h-full z-50 pointer-events-none flex items-center justify-center">
@@ -125,7 +125,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute left-[20%] top-[55%] w-full max-sm:left-[20%] max-sm:top-[50%] max-sm:w-[45%]">
+            <div className="absolute left-[19%] top-[52%] w-full max-sm:left-[20%] max-sm:top-[50%] max-sm:w-[45%]">
               <div className="flex gap-1.5 max-sm:gap-1.5 sm:gap-3 md:gap-3 lg:gap-3 items-center text-white text-[17px] max-sm:text-[8px] sm:text-[1.6vw] md:text-[10px] lg:text-xs">
                 <span className="max-sm:px-0.5">1H</span>
                 <span className="px-1 md:px-2 py-0.5 max-sm:px-1 max-sm:py-0 rounded-md bg-white/10 backdrop-blur-md border border-white/10">1D</span>
